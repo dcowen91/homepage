@@ -33,7 +33,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-offset-4 panel">
+                <div class="col-lg-6 col-offset-3 panel">
                     <h1 class="margin-base vertical">Drew Owen</h1>
                     <p> I am a software engineer interested in all realms of development!</p>
                     <p>I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.</p>
