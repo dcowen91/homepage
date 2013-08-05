@@ -8,6 +8,26 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
         <link href="http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600" rel="stylesheet" />
         <style>
+            body  {
+                padding-top: 20px;
+                font-size: 16px;
+                font-family: "Open Sans",serif;
+                background: transparent;
+            }
+
+            h1 {
+                font-family: "Abel", Arial, sans-serif;
+                font-weight: 400;
+                font-size: 40px;
+            }
+
+            .panel {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            .margin-base-vertical {
+                margin: 40px 0;
+            }
         </style>
     </head>
     <body>
