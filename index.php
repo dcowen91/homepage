@@ -39,6 +39,7 @@
   }
 
   .container {
+    position: relative;
     -webkit-transition:  left 0.4s ease-in-out;
     -moz-transition:  left 0.4s ease-in-out;
     -ms-transition:  left 0.4s ease-in-out;
@@ -46,6 +47,9 @@
     transition:  left 0.4s ease-in-out;
   }
 
+  .container.open-sidebar {
+    left: 240px;
+}
 
   #sidebar {
     position: absolute;
@@ -87,14 +91,21 @@
     <div id="siderbar">
       <ul>
         <li> <a href="#">Home</a></li>
-        <li> <a href="#">Home</a></li>
-        <li> <a href="#">Home</a></li>
-        <li> <a href="#">Home</a></li>
+        <li> <a href="#">Blog</a></li>
+        <li> <a href="#">Projects</a></li>
+        <li> <a href="#">Contact</a></li>
+        <li> <a href="#">Contact</a></li>
+        <li> 
       </ul>
     </div>
   </div>
 
   <div class="container">
+    <a href="#" data-toggle=".container" id="sidebar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+    </a>
     <div class="row">
       <div class="col-lg-6 col-offset-3" panel>
 
