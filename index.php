@@ -14,6 +14,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow:hidden;
   }
 
   body {
@@ -21,6 +22,7 @@
     font-size: 16px;
     font-family: "Open Sans",serif;
     background: transparent;
+    overflow:hidden;
   }
   h1 {
     font-family: "Abel", Arial, sans-serif;
@@ -36,11 +38,62 @@
     margin: 40px 0;
   }
 
+  .container {
+    -webkit-transition:  left 0.4s ease-in-out;
+    -moz-transition:  left 0.4s ease-in-out;
+    -ms-transition:  left 0.4s ease-in-out;
+    -o-transition:  left 0.4s ease-in-out;
+    transition:  left 0.4s ease-in-out;
+  }
+
+
+  #sidebar {
+    position: absolute;
+    left: -240px;
+    background: #DF314D;
+    width: 240px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  #sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #sidebar ul li {
+    margin: 0;
+  }
+  #sidebar ul li a {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #C9223D;
+    -webkit-transition:  background 0.3s ease-in-out;
+    -moz-transition:  background 0.3s ease-in-out;
+    -ms-transition:  background 0.3s ease-in-out;
+    -o-transition:  background 0.3s ease-in-out;
+    transition:  background 0.3s ease-in-out;
+  }
+
   </style>
 
 </head>
 
 <body>
+  <div class="container">
+    <div id="siderbar">
+      <ul>
+        <li> <a href="#">Home</a></li>
+        <li> <a href="#">Home</a></li>
+        <li> <a href="#">Home</a></li>
+        <li> <a href="#">Home</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-offset-3" panel>
@@ -61,6 +114,20 @@
       </div>
     </div>
   </div>
-
 </body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $("[data-toggle]").click(function() {
+    var toggle_el = $(this).data("toggle");
+    $(toggle_el).toggleClass("open-sidebar");
+  });
+});
+
+
+</script>
+
+
+
 </html>
