@@ -42,7 +42,7 @@
     margin: 40px 0;
   }
 
-  .container {
+  .container.sidebar {
     position: relative;
     height: 100%;
     width: 100%;
@@ -120,45 +120,47 @@
 
 <body>
   <div class="container">
-    <div id="sidebar">
-      <ul>
-        <li> <a href="#">Home</a></li>
-        <li> <a href="#">Blog</a></li>
-        <li> <a href="#">Projects</a></li>
-        <li> <a href="#">Contact</a></li>
-        <li> <a href="#">Resume</a></li>
-        <li> 
-        </ul>
+    <div class="sidebar">
+      <div id="sidebar">
+        <ul>
+          <li> <a href="#">Home</a></li>
+          <li> <a href="#">Blog</a></li>
+          <li> <a href="#">Projects</a></li>
+          <li> <a href="#">Contact</a></li>
+          <li> <a href="#">Resume</a></li>
+          <li> 
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="container">
       <div class="main-content">
-      <a href="#" data-toggle=".container" id="sidebar-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="row">
-        <div class="col-lg-6 col-offset-3" panel>
+        <a href="#" data-toggle=".container" id="sidebar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="row">
+          <div class="col-lg-6 col-offset-3" panel>
 
-          <h1 class="margin-base-vertical">Drew Owen</h1>
+            <h1 class="margin-base-vertical">Drew Owen</h1>
 
-          <p> 
-            I am a software engineer interested in all realms of development!
-          </p>
+            <p> 
+              I am a software engineer interested in all realms of development!
+            </p>
 
-          <p>
-            I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
-          </p>
+            <p>
+              I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
+            </p>
 
-          <p>
-            This is My "Home Page". As of now, there really isn't much to see. Don't assume that there isn't much to me though! More is to come to this venue.
-          </p>
+            <p>
+              This is My "Home Page". As of now, there really isn't much to see. Don't assume that there isn't much to me though! More is to come to this venue.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
   <script src="bootstrap.min.js" rel="script"></script>
