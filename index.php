@@ -10,10 +10,12 @@
 
 <body>
 <h1> Hello </h1>
-<a href="index2.php">Index2</a> <br/>
+<a href="index2.php">Index2</a>
 <p>This is the default landing page</p>
-<a href="page.php">Page</a><br/>
+<br/>
+<a href="page.php">Page</a>
 <p>This is my work to merge</p>
+<br/>
 <a href="sidebar.php">Sidebar</a>
 <p>This is the default sidebar</p>
 
