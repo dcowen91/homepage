@@ -88,7 +88,7 @@
 
 <body>
   <div class="container">
-    <div id="siderbar">
+    <div id="sidebar">
       <ul>
         <li> <a href="#">Home</a></li>
         <li> <a href="#">Blog</a></li>
