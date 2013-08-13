@@ -35,11 +35,15 @@
     margin: 40px 0;
   }
 
+  .pull-right {
+  float: right;
+}
+
   </style>
 
 </head>
 <body>
-  <div class="row pull-right" id="sidebar">
+  <div class="inline row pull-right" id="sidebar">
     <ul>
       <li> <a href="#">Home</a></li>
       <li> <a href="#">Blog</a></li>
