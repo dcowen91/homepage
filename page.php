@@ -43,8 +43,8 @@
 
 </head>
 <body>
-  <div class="inline row pull-right" id="sidebar">
-    <ul>
+  <div class="row pull-right" id="sidebar">
+    <ul class="inline">
       <li> <a href="#">Home</a></li>
       <li> <a href="#">Blog</a></li>
       <li> <a href="#">Projects</a></li>
