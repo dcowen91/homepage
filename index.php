@@ -11,8 +11,11 @@
 <body>
 <h1> Hello </h1>
 <a href="index2.php">Index2</a> <br/>
+<p>This is the default landing page</p>
 <a href="page.php">Page</a><br/>
+<p>This is my work to merge</p>
 <a href="sidebar.php">Sidebar</a>
+<p>This is the default sidebar</p>
 
   </body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
