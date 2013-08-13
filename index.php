@@ -132,7 +132,8 @@
       </div>
     </div>
 
-    <div class="container main-content">
+    <div class="container">
+      <div class="main-content">
       <a href="#" data-toggle=".container" id="sidebar-toggle">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -157,6 +158,7 @@
         </div>
       </div>
     </div>
+  </div>
   </body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
   <script src="bootstrap.min.js" rel="script"></script>
