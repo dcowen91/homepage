@@ -42,7 +42,7 @@
     margin: 40px 0;
   }
 
-  .container.sidebar {
+  .container {
     position: relative;
     height: 100%;
     width: 100%;
@@ -119,7 +119,7 @@
 </head>
 
 <body>
-  <div class="container sidebar">
+  <div class="container">
     <div id="sidebar">
       <ul>
         <li> <a href="#">Home</a></li>
