@@ -21,6 +21,11 @@
     <ul class="inline">
       <li> <a href="#">Home</a></li><li> <a href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li>
     </ul>
+ <div class="row" id="sidebar">
+    <ul class="inline">
+      <li> <a href="#">Home</a></li><li><a href="#">Blog</a></li><li> <a href="#">Projects</a></li>
+    </ul>
+     
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
