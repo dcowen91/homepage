@@ -10,8 +10,8 @@
 
 <body>
 <h1> Hello </h1>
-<a href="index2.php">Index2</a>
-<a href="page.php">Page</a>
+<a href="index2.php">Index2</a> <br/>
+<a href="page.php">Page</a><br/>
 <a href="sidebar.php">Sidebar</a>
 
   </body>
