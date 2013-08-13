@@ -14,7 +14,6 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow:hidden;
   }
 
   body {
@@ -22,12 +21,17 @@
     font-size: 16px;
     font-family: "Open Sans",serif;
     background: transparent;
-    overflow:hidden;
   }
   h1 {
     font-family: "Abel", Arial, sans-serif;
     font-weight: 400;
     font-size: 40px;
+  }
+
+  body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
   }
 
   .panel {
@@ -40,6 +44,9 @@
 
   .container {
     position: relative;
+    height: 100%;
+    width: 100%;
+
     -webkit-transition:  left 0.4s ease-in-out;
     -moz-transition:  left 0.4s ease-in-out;
     -ms-transition:  left 0.4s ease-in-out;
@@ -49,7 +56,7 @@
 
   .container.open-sidebar {
     left: 240px;
-}
+  }
 
   #sidebar {
     position: absolute;
@@ -82,7 +89,32 @@
     transition:  background 0.3s ease-in-out;
   }
 
-  </style>
+  #sidebar ul li:hover a {
+    background: #C9223D;
+  }
+
+  .main-content #sidebar-toggle {
+    background: #DF314D;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+    padding: 10px 7px;
+    float: left;
+  }
+  .main-content #sidebar-toggle .bar{
+   display: block;
+   width: 18px;
+   margin-bottom: 3px;
+   height: 2px;
+   background-color: #fff;
+   border-radius: 1px;   
+ }
+ .main-content #sidebar-toggle .bar:last-child{
+   margin-bottom: 0;   
+ }
+
+
+ </style>
 
 </head>
 
@@ -96,49 +128,49 @@
         <li> <a href="#">Contact</a></li>
         <li> <a href="#">Resume</a></li>
         <li> 
-      </ul>
-    </div>
-  </div>
-
-  <div class="container">
-    <a href="#" data-toggle=".container" id="sidebar-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-    </a>
-    <div class="row">
-      <div class="col-lg-6 col-offset-3" panel>
-
-        <h1 class="margin-base-vertical">Drew Owen</h1>
-
-        <p> 
-          I am a software engineer interested in all realms of development!
-        </p>
-
-        <p>
-          I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
-        </p>
-
-        <p>
-          This is My "Home Page". As of now, there really isn't much to see. Don't assume that there isn't much to me though! More is to come to this venue.
-        </p>
+        </ul>
       </div>
     </div>
-  </div>
-</body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function() {
-  $("[data-toggle]").click(function() {
-    var toggle_el = $(this).data("toggle");
-    $(toggle_el).toggleClass("open-sidebar");
+    <div class="container main-content">
+      <a href="#" data-toggle=".container" id="sidebar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="row">
+        <div class="col-lg-6 col-offset-3" panel>
+
+          <h1 class="margin-base-vertical">Drew Owen</h1>
+
+          <p> 
+            I am a software engineer interested in all realms of development!
+          </p>
+
+          <p>
+            I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
+          </p>
+
+          <p>
+            This is My "Home Page". As of now, there really isn't much to see. Don't assume that there isn't much to me though! More is to come to this venue.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("[data-toggle]").click(function() {
+      var toggle_el = $(this).data("toggle");
+      $(toggle_el).toggleClass("open-sidebar");
+    });
   });
-});
 
 
-</script>
+  </script>
 
 
 
-</html>
+  </html>
