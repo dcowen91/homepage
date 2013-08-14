@@ -19,7 +19,7 @@
   }
 
   body {
-  /*  padding-top: 20px; */
+    /*  padding-top: 20px; */
     font-size: 16px;
     font-family: "Open Sans",serif;
     background: transparent;
@@ -91,7 +91,32 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
   <script type="text/javascript">
+  function dayfield() {
+    var date = new Date();
+    var month = date.getMonth()+1;
+    var year = date.getFullYear();
+    var day = date.getDate() - 2;
+    if (day < 1) {
+      day = 25;
+      month--;
+      if (month < 1) {
+        month = 12;
+        year--;
+      }
+    }
+    return year + "-" + month + "-" + day;
+  }
 
+  $.ajax(
+  {
+    url: "http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=52fecbd7ef1693e03136d93907b6b501&date=" + dayfield() + "&per_page=20&page=1", 
+    timeout:5000,
+    datatype:"json",
+    success: function(a) {
+      console.log("success");
+      console.log(a);
+    }
+  });
   </script>
 
 </body>
