@@ -52,7 +52,7 @@
   }
 
   .container {
-    padding-top: 60px;
+   /* padding-top: 20px; */
   }
 
 
@@ -60,7 +60,7 @@
 
 </head>
 <body>
-  <div class="panel" id="sidebar">
+  <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
         <li> <a href="#">Home</a></li><li> <a href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="#">Resume</a></li> 
