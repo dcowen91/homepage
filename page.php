@@ -15,7 +15,7 @@
     -o-background-size: cover;
     background-size: cover;
     font-family: "Open Sans",serif;
-  
+    
   }
 
   body {
@@ -38,32 +38,34 @@
   }
 
   .pull-right {
-  float: right;
-}
+    float: right;
+  }
 
-.inline {
-  padding-right: 20px;
-}
+  .inline {
+    padding-right: 20px;
+  }
 
- .inline  > li {
-  display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
- }
+  .inline  > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 
- .container {
+  .container {
     padding-top: 60px;
- }
+  }
 
 
   </style>
 
 </head>
 <body>
-  <div class="row pull-right panel" id="sidebar">
-    <ul class="inline">
-      <li> <a href="#">Home</a></li><li> <a href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="#">Resume</a></li> 
-    </ul>
+  <div class="panel">
+    <div class="row pull-right" id="sidebar">
+      <ul class="inline">
+        <li> <a href="#">Home</a></li><li> <a href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="#">Resume</a></li> 
+      </ul>
+    </div>
   </div>
   <div class="container">
     <div class="row">
