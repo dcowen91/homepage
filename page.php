@@ -42,6 +42,7 @@
 }
 
 .inline {
+  margin: 40px 0;
   padding-right: 20px;
 }
 
