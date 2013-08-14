@@ -31,7 +31,8 @@
   }
   .panel {
     background-color: rgba(255, 255, 255, 0.9);
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    border-radius: 5px;
   }
 
   .margin-base-vertical {
