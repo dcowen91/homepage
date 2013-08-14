@@ -53,9 +53,10 @@
     padding-left: 5px;
   }
 
-  .container {
+  #main {
     margin-top: -120px;
     padding-top: -120px;
+    z-index: 1;
 
   }
 
@@ -73,7 +74,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-offset-3 panel">
+      <div class="col-lg-6 col-offset-3 panel" id="main">
         <h1 class="margin-base-vertical">Drew Owen</h1>
         <p> 
           I am a software engineer interested in all things CS.
