@@ -37,6 +37,7 @@
 
   .margin-base-vertical {
     margin: 30px 0;
+    margin-top: -25px;
   }
 
   .pull-right {
