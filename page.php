@@ -19,7 +19,7 @@
   }
 
   body {
-    padding-top: 40px;
+    padding-top: 20px;
     font-size: 16px;
     font-family: "Open Sans",serif;
     background: transparent;
@@ -45,6 +45,10 @@
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
+ }
+
+ .container {
+    padding-top: 60px;
  }
 
 
