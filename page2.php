@@ -13,6 +13,10 @@
   float: right;
 }
 
+ .inline {
+  display: inline-block;
+ }
+
   </style>
 
 </head>
