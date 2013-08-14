@@ -19,7 +19,7 @@
   }
 
   body {
-    padding-top: 20px;
+  /*  padding-top: 20px; */
     font-size: 16px;
     font-family: "Open Sans",serif;
     background: transparent;
@@ -53,10 +53,6 @@
 
   .container {
     padding-top: 60px;
-  }
-
-  #sidebar {
-    margin-bottom: 50px;
   }
 
 
