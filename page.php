@@ -41,6 +41,10 @@
   float: right;
 }
 
+.inline {
+  padding-right: 20px;
+}
+
  .inline  > li {
   display: inline-block;
   padding-right: 5px;
