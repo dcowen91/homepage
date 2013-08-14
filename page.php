@@ -54,7 +54,7 @@
   }
 
   #main {
-    margin-top: -80px;
+    margin-top: -60px;
     /*padding-top: -100px;*/
     z-index: 1;
 
