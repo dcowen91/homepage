@@ -79,7 +79,7 @@
           I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
         </p>
         <p>
-          This is My "Home Page". As of now, there really isn't much to see. Don't assume that there isn't much to me though! There is more to come.
+          Feel free to look around, you might learn a thing or two about me!
         </p>
       </div>
     </div>
