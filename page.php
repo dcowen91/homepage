@@ -19,7 +19,7 @@
   }
 
   body {
-    padding-top: 20px;
+    padding-top: 40px;
     font-size: 16px;
     font-family: "Open Sans",serif;
     background: transparent;
@@ -68,7 +68,7 @@
           I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
         </p>
         <p>
-          This is My "Home Page". As of now, there really isn't much to see. Don't assume that there isn't much to me though! More is to come to this venue.
+          This is My "Home Page". As of now, there really isn't much to see. Don't assume that there isn't much to me though! There is more to come.
         </p>
       </div>
     </div>
