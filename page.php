@@ -36,7 +36,7 @@
   }
 
   .margin-base-vertical {
-    margin: 30px 0;
+    margin: 20px 0;
   }
 
   .pull-right {
@@ -54,7 +54,7 @@
   }
 
   #main {
-    margin-top: -60px;
+    margin-top: -70px;
     /*padding-top: -100px;*/
     z-index: 1;
 
