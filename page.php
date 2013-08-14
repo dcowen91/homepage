@@ -54,8 +54,8 @@
   }
 
   #main {
-    margin-top: -120px;
-    padding-top: -120px;
+    margin-top: -100px;
+    padding-top: -100px;
     z-index: 1;
 
   }
