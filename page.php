@@ -14,6 +14,8 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: "Open Sans",serif;
+  
   }
 
   body {
