@@ -41,6 +41,8 @@
 
  .inline  > li {
   display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
  }
 
 
