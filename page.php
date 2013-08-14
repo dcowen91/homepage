@@ -119,6 +119,8 @@
     success: function(a) {
       console.log("success");
       console.log(a);
+      var x = JSON.parse(a);
+      console.log(x);
     }
   });
   </script>
