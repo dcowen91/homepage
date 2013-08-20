@@ -125,6 +125,12 @@
       console.log(x);
     }
   });
+
+function jsonFlickrApi (response) {
+  console.log("success in jsonFlickrApi");
+  console.log(response);
+
+
   </script>
 
 </body>
