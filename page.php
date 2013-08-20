@@ -115,7 +115,9 @@
   {
     url: "http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=60f6a409572dcbbe23bd08661dbdd34a&date=" + dayfield() + "&per_page=20&page=1", 
     timeout:5000,
-    datatype:"json",
+    type: "GET",
+    cache: true,
+    datatype:"jsonp",
     success: function(a) {
       console.log("success");
       console.log(a);
