@@ -66,10 +66,10 @@
    margin-right: auto;
    text-align: center;
 
-  }
+ }
 
 
-  </style>
+ </style>
 
 </head>
 <body>
@@ -93,11 +93,11 @@
         <p>
           Feel free to look around, you might learn a thing or two about me!
         </p>
-        <div id="button">
-          <button type="button" class="btn btn-default btn-primary">Hide</button>
-          <button type="button" class="btn btn-default btn-primary">New Pic</button>
-        </div>
       </div>
+    </div>
+    <div id="button">
+      <button type="button" class="btn btn-default btn-primary">Hide</button>
+      <button type="button" class="btn btn-default btn-primary">New Pic</button>
     </div>
   </div>
   <img id="hidden" src=""></img>
