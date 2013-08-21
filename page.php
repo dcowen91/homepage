@@ -60,6 +60,11 @@
     visibility: hidden;
   }
 
+  #button {
+     margin:0 auto;
+    float:none;
+  }
+
 
   </style>
 
@@ -85,7 +90,7 @@
         <p>
           Feel free to look around, you might learn a thing or two about me!
         </p>
-          <button type="button" class="btn btn-default btn-primary">Default</button>
+          <button id="button" type="button" class="btn btn-default btn-primary">Hide</button>
       </div>
     </div>
   </div>
