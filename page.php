@@ -152,7 +152,6 @@
   });
 
   function jsonFlickrApi (response) {
-    $('#loading').show();
     pics = response.photos.photo;
     setbackground();
   }
