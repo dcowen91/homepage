@@ -151,6 +151,7 @@
     $('#hidden').attr("src", url).load(function() {
       $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
     });
+    pics = pics.slice(num, 1);
   }
 
   $('#hide').click(function() {
@@ -163,6 +164,10 @@
      $('#hide').html('Hide');
    }
  });
+
+  $('#newpic').click(function() {
+    jsonFlickrApi(pics);
+  });
 
   </script>
 
