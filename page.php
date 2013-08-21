@@ -129,7 +129,7 @@ function jsonFlickrApi (response) {
   pics = response.photos.photo;
   var num = Math.floor((Math.random()*pics.length)+1);
   var img = response.photos.photo[num];
-  $('body').css('background-image', 'url(http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '.jpg)');
+  $('body').css('background-image', 'url(http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '.jpg) no-repeat center center fixed');
 }
 
   </script>
