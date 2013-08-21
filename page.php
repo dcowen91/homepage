@@ -79,7 +79,7 @@
     margin-right: auto;
     text-align: center;
     display: block;   
-}
+  }
 
 
   </style>
@@ -157,7 +157,7 @@
   }
 
 
-function setbackground() {
+  function setbackground() {
     var num = Math.floor(Math.random()*pics.length);
     var img = pics[num];
     url = 'http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '_b.jpg';
@@ -181,12 +181,10 @@ function setbackground() {
   $('#newpic').click(function() {
     $('#loading').show();
     setbackground();
-      setTimeout(hideload(), 10000);
+    setTimeout(function() {
+     $('#loading').hide();
+   }, 10000);
   });
-
-  function hideload() {
-    $('#loading').hide();
-  }
 
   </script>
 
