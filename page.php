@@ -21,6 +21,7 @@
     font-size: 16px;
     font-family: "Open Sans",serif;
     background: transparent;
+    overflow:hidden;
   }
   h1 {
     font-family: "Abel", Arial, sans-serif;
