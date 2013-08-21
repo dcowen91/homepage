@@ -61,7 +61,8 @@
   }
 
   #button {
-   text-align: center
+   text-align: center;
+
   }
 
 
