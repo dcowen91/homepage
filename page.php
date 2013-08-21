@@ -91,6 +91,9 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
   <script type="text/javascript">
+
+var pics = null;
+
   function dayfield() {
     var date = new Date();
     var month = date.getMonth()+1;
@@ -118,12 +121,12 @@
     type: "GET",
     cache: true,
     datatype:"jsonp",
-
   });
 
 function jsonFlickrApi (response) {
   console.log("success in jsonFlickrApi");
   console.log(response);
+  pics = response.photos.photo;
   var img1 = response.photos.photo[0];
   $('body').css('background-image', 'url(http://farm' + img1.farm+ '.staticflickr.com/' +img1.server + '/' + img1.id  + '_' + img1.secret+ '.jpg)');
 }
