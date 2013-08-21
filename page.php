@@ -127,9 +127,10 @@ function jsonFlickrApi (response) {
   console.log("success in jsonFlickrApi");
   console.log(response);
   pics = response.photos.photo;
-  var num = Math.floor((Math.random()*pics.length)+1);
+  var num = Math.floor(Math.random()*pics.length);
   var img = response.photos.photo[num];
-  $('body').css('background-image', 'url(http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '.jpg) no-repeat center center fixed');
+  var url = 'http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '.jpg';
+  $('body').css('background-image', 'url(' + url + ') no-repeat center center fixed');
 }
 
   </script>
