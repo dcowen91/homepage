@@ -85,10 +85,10 @@
         <p>
           Feel free to look around, you might learn a thing or two about me!
         </p>
+          <button class="panel" type="button" class="btn btn-default">Default</button>
       </div>
     </div>
   </div>
-  <button class="panel" type="button" class="btn btn-default">Default</button>
   <img id="hidden" src=""></img>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
@@ -134,7 +134,7 @@
     var img = response.photos.photo[num];
     url = 'http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '_b.jpg';
     $('#hidden').attr("src", url).load(function() {
-      $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(7500, 1);
+      $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
     });
   }
 
