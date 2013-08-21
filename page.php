@@ -94,8 +94,8 @@
           Feel free to look around, you might learn a thing or two about me!
         </p>
         <div id="button">
-          <button type="button" class="btn btn-default btn-primary">Hide</button>
-          <button type="button" class="btn btn-default btn-primary">New Pic</button>
+          <button id="hide" type="button" class="btn btn-default btn-primary">Hide</button>
+          <button id "newpic" type="button" class="btn btn-default btn-primary">New Pic</button>
         </div>
       </div>
     </div>
@@ -148,6 +148,10 @@
       $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
     });
   }
+
+  $('#hide').click(function() {
+  $('#main').slideUp();
+});
 
   </script>
 
