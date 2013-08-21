@@ -155,7 +155,7 @@ function setbackground() {
     $('#hidden').attr("src", url).load(function() {
       $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
     });
-    pics = pics.splice(num, 1);
+    pics.splice(num, 1);
   }
 
   $('#hide').click(function() {
