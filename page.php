@@ -94,10 +94,10 @@
           Feel free to look around, you might learn a thing or two about me!
         </p>
       </div>
-    </div>
-    <div id="button">
+          <div id="button">
       <button type="button" class="btn btn-default btn-primary">Hide</button>
       <button type="button" class="btn btn-default btn-primary">New Pic</button>
+    </div>
     </div>
   </div>
   <img id="hidden" src=""></img>
