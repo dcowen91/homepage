@@ -183,7 +183,7 @@
     setbackground();
     setTimeout(function() {
      $('#loading').hide();
-   }, 500);
+   }, 100);
   });
 
   </script>
