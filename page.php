@@ -55,6 +55,7 @@
     margin-top: -70px;
     z-index: 1;
     margin-bottom: -50px;
+    padding-bottom: -50px;
   }
 
   #hidden {
@@ -66,8 +67,6 @@
    margin-left: auto;   
    margin-right: auto;
    text-align: center;
-   padding-bottom: -50px;
-
  }
 
 
