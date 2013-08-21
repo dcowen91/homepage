@@ -165,7 +165,6 @@ function setbackground() {
     $('#hidden').attr("src", url).load(function() {
       $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
     });
-    window.setTimeout($('#loading').hide(), 2000)
     pics.splice(num, 1);
   }
 
@@ -183,6 +182,7 @@ function setbackground() {
   $('#newpic').click(function() {
     $('#loading').show();
     setbackground();
+    window.setTimeout($('#loading').hide(), 10000);
   });
 
   </script>
