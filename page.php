@@ -178,6 +178,7 @@ function setbackground() {
  });
 
   $('#newpic').click(function() {
+    $('#loading').show();
     setbackground();
   });
 
