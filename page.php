@@ -73,6 +73,7 @@
   }
 
   #loading {
+    padding-top: 20px;
     position: relative;
     margin-left: auto;   
     margin-right: auto;
@@ -164,7 +165,7 @@ function setbackground() {
     $('#hidden').attr("src", url).load(function() {
       $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
     });
-    //$('#loading').hide();
+    $('#loading').hide();
     pics.splice(num, 1);
   }
 
