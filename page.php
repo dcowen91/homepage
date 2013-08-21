@@ -154,7 +154,7 @@
   }
 
   $('#hide').click(function() {
-    if ($('#hide').attr('value') === 'Hide') {
+    if ($('#hide').html() === 'Hide') {
       $('#main').slideUp();
       $('#hide').html('Show');
     }
