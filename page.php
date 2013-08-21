@@ -85,7 +85,7 @@
         <p>
           Feel free to look around, you might learn a thing or two about me!
         </p>
-          <button class="panel" type="button" class="btn btn-default">Default</button>
+          <button type="button" class="btn btn-default btn-primary">Default</button>
       </div>
     </div>
   </div>
