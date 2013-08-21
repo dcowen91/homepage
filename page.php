@@ -59,21 +59,21 @@
   }
 
   #hidden {
-    visibility: hidden;
+    display: none;
   }
 
   #button {
-  position: relative;
-   margin-top: -40px;
-   display: block;   
-   margin-left: auto;   
-   margin-right: auto;
-   text-align: center;
-   z-index: 2;
- }
+    position: relative;
+    margin-top: -40px;
+    display: block;   
+    margin-left: auto;   
+    margin-right: auto;
+    text-align: center;
+    z-index: 2;
+  }
 
 
- </style>
+  </style>
 
 </head>
 <body>
@@ -156,13 +156,13 @@
   $('#hide').click(function() {
     if ($('#hide').attr('value') === 'Hide') {
       $('#main').slideUp();
-      $('#hide')attr('value', 'Show');
+      $('#hide').attr('value', 'Show');
     }
     else {
-       $('#main').slideDown();
-      $('#hide')attr('value', 'Hide');
-    }
-  });
+     $('#main').slideDown();
+     $('#hide').attr('value', 'Hide');
+   }
+ });
 
   </script>
 
