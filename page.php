@@ -9,7 +9,7 @@
   <style>
 
   html {
-    background: white no-repeat center center fixed;      
+    background: url(http://farm8.staticflickr.com/7401/9518526227_44b68fc816_b.jpg) no-repeat center center fixed;      
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -130,8 +130,7 @@ function jsonFlickrApi (response) {
   var num = Math.floor(Math.random()*pics.length);
   var img = response.photos.photo[num];
   var url = 'http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '_b.jpg';
-  $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(7500, 1);
-  //url(http://farm8.staticflickr.com/7302/9518403330_30c13527d9.jpg) no-repeat center center fixed
+ // $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover");
 }
 
   </script>
