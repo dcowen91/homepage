@@ -156,11 +156,11 @@
   $('#hide').click(function() {
     if ($('#hide').attr('value') === 'Hide') {
       $('#main').slideUp();
-      $('#hide').attr('value', 'Show');
+      $('#hide').html('Show');
     }
     else {
      $('#main').slideDown();
-     $('#hide').attr('value', 'Hide');
+     $('#hide').html('Hide');
    }
  });
 
