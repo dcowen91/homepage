@@ -64,7 +64,7 @@
 
   #button {
   position: relative;
-   margin-top: -30px;
+   margin-top: -40px;
    display: block;   
    margin-left: auto;   
    margin-right: auto;
