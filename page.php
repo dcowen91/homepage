@@ -65,6 +65,7 @@
    margin-left: auto;   
    margin-right: auto;
    text-align: center;
+   padding-bottom: -50px;
 
  }
 
