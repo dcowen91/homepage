@@ -152,6 +152,7 @@
   });
 
   function jsonFlickrApi (response) {
+    $('#loading').show();
     pics = response.photos.photo;
     setbackground();
   }
@@ -165,6 +166,9 @@
       $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
     });
     pics.splice(num, 1);
+        setTimeout(function() {
+     $('#loading').hide();
+   }, 200);
   }
 
   $('#hide').click(function() {
@@ -181,9 +185,6 @@
   $('#newpic').click(function() {
     $('#loading').show();
     setbackground();
-    setTimeout(function() {
-     $('#loading').hide();
-   }, 200);
   });
 
   </script>
