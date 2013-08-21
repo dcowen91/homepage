@@ -118,12 +118,14 @@
     type: "GET",
     cache: true,
     datatype:"jsonp",
-    
+
   });
 
 function jsonFlickrApi (response) {
   console.log("success in jsonFlickrApi");
   console.log(response);
+  var img1 = response.photos.photo[0];
+  $.css('background-image', 'url(http://farm' + img1.farm+ '.staticflickr.com/' +img1.server + '/' + img1.id  + '_' + img1.secret+ '.jpg)');
 }
 
   </script>
