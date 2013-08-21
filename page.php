@@ -134,7 +134,7 @@
 
   $.ajax(
   {
-    url: "http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&format=json&api_key=60f6a409572dcbbe23bd08661dbdd34a&date=" + dayfield() + "&per_page=20&page=1", 
+    url: "http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&format=json&api_key=60f6a409572dcbbe23bd08661dbdd34a&date=" + dayfield() + "&per_page=50&page=1", 
     timeout:5000,
     type: "GET",
     cache: true,
