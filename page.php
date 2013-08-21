@@ -72,6 +72,12 @@
     z-index: 2;
   }
 
+  #loading-indicator {
+    margin-left: auto;   
+    margin-right: auto;
+    text-align: center;
+}
+
 
   </style>
 
@@ -143,7 +149,7 @@
   });
 
   function jsonFlickrApi (response) {
-    console.log("success in jsonFlickrApi");
+    $('#loading').show();
     pics = response.photos.photo;
     setbackground();
   }
@@ -156,6 +162,7 @@ function setbackground() {
     $('#hidden').attr("src", url).load(function() {
       $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
     });
+    $('#loading').hide();
     pics.splice(num, 1);
   }
 
