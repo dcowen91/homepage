@@ -182,7 +182,7 @@ function setbackground() {
   $('#newpic').click(function() {
     $('#loading').show();
     setbackground();
-    window.setTimeout($('#loading').hide(), 10000);
+      setTimeout($('#loading').hide(), 10000);
   });
 
   </script>
