@@ -72,7 +72,7 @@
     z-index: 2;
   }
 
-  #loading-indicator {
+  #loading {
     position: relative;
     margin-left: auto;   
     margin-right: auto;
