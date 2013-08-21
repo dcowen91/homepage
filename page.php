@@ -9,13 +9,12 @@
   <style>
 
   html {
-    background: url(http://farm8.staticflickr.com/7401/9518526227_44b68fc816_b.jpg) no-repeat center center fixed;      
+    background: white no-repeat center center fixed;      
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-family: "Open Sans",serif;
-
   }
 
   body {
@@ -54,9 +53,11 @@
 
   #main {
     margin-top: -70px;
-    /*padding-top: -100px;*/
     z-index: 1;
+  }
 
+  #hidden {
+    visibility: hidden;
   }
 
 
@@ -88,11 +89,13 @@
     </div>
   </div>
   <button class="panel" type="button" class="btn btn-default">Default</button>
+  <img id="hidden" src=""></img>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
   <script type="text/javascript">
 
-var pics = null;
+  var pics;
+  var url;
 
   function dayfield() {
     var date = new Date();
@@ -123,15 +126,17 @@ var pics = null;
     datatype:"jsonp",
   });
 
-function jsonFlickrApi (response) {
-  console.log("success in jsonFlickrApi");
-  console.log(response);
-  pics = response.photos.photo;
-  var num = Math.floor(Math.random()*pics.length);
-  var img = response.photos.photo[num];
-  var url = 'http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '_b.jpg';
-  $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover");
-}
+  function jsonFlickrApi (response) {
+    console.log("success in jsonFlickrApi");
+    console.log(response);
+    pics = response.photos.photo;
+    var num = Math.floor(Math.random()*pics.length);
+    var img = response.photos.photo[num];
+    url = 'http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '_b.jpg';
+    $('#hidden').attr("src", url).load(function() {
+      $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(750, 1);
+    });
+  }
 
   </script>
 
