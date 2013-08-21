@@ -9,7 +9,7 @@
   <style>
 
   html {
-    background: url(http://farm8.staticflickr.com/7302/9518403330_30c13527d9.jpg) no-repeat center center fixed;      
+    background: url(http://farm8.staticflickr.com/7302/9518403330_30c13527d9_b.jpg) no-repeat center center fixed;      
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
