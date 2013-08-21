@@ -130,7 +130,7 @@ function jsonFlickrApi (response) {
   var num = Math.floor(Math.random()*pics.length);
   var img = response.photos.photo[num];
   var url = 'http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '.jpg';
-  //$('body').css('background-image', 'url(' + url + ') no-repeat center center fixed');
+  $('body').css('background', 'url(' + url + ') no-repeat center center fixed');
   //url(http://farm8.staticflickr.com/7302/9518403330_30c13527d9.jpg) no-repeat center center fixed
 }
 
