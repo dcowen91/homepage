@@ -63,6 +63,7 @@
   }
 
   #button {
+   margin-top: -70px;
    display: block;   
    margin-left: auto;   
    margin-right: auto;
@@ -94,12 +95,12 @@
         <p>
           Feel free to look around, you might learn a thing or two about me!
         </p>
-        <div id="button">
-          <button id="hide" type="button" class="btn btn-default btn-primary">Hide</button>
-          <button id "newpic" type="button" class="btn btn-default btn-primary">New Pic</button>
-        </div>
       </div>
     </div>
+  </div>
+  <div id="button">
+    <button id="hide" type="button" class="btn btn-default btn-primary">Hide</button>
+    <button id "newpic" type="button" class="btn btn-default btn-primary">New Pic</button>
   </div>
   <img id="hidden" src=""></img>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
@@ -151,8 +152,8 @@
   }
 
   $('#hide').click(function() {
-  $('#main').slideUp();
-});
+    $('#main').slideUp();
+  });
 
   </script>
 
