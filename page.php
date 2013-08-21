@@ -61,8 +61,7 @@
   }
 
   #button {
-     margin:0 auto;
-    float:none;
+   text-align: center
   }
 
 
