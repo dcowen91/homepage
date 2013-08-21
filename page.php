@@ -54,8 +54,7 @@
   #main {
     margin-top: -70px;
     z-index: 1;
-    margin-bottom: -50px;
-    padding-bottom: -50px;
+    padding-bottom: 10px;
   }
 
   #hidden {
