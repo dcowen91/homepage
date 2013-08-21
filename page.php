@@ -55,7 +55,7 @@
   #main {
     margin-top: -70px;
     z-index: 1;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   #hidden {
@@ -63,7 +63,8 @@
   }
 
   #button {
-   margin-top: -50px;
+
+   margin-top: -30px;
    display: block;   
    margin-left: auto;   
    margin-right: auto;
