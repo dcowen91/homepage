@@ -89,7 +89,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a href="#">Home</a></li><li> <a href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="#">Resume</a></li> 
+        <li> <a href="#">Home</a></li><li> <a href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
@@ -104,7 +104,7 @@
           I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
         </p>
         <p>
-          Feel free to look around, you might learn a thing or two about me!
+          Feel free to look around!
         </p>
       </div>
     </div>
