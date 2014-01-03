@@ -167,9 +167,6 @@
       $('#loading').hide();
     });
     pics.splice(num, 1);
-   //      setTimeout(function() {
-   //   $('#loading').hide();
-   // }, 200);
   }
 
   $('#hide').click(function() {
@@ -187,6 +184,12 @@
     $('#loading').show();
     setbackground();
   });
+
+
+  $( document ).ready(function() {
+    var currentState = history.state;
+    console.log(currentState);
+});
 
   </script>
 
