@@ -187,7 +187,7 @@
 
 
   $( document ).ready(function() {
-    var currentState = window.location.path;
+    var currentState = window.location.pathname;
     console.log(currentState);
 });
 
