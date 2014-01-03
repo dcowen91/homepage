@@ -164,11 +164,12 @@
     url = 'http://farm' + img.farm+ '.staticflickr.com/' +img.server + '/' + img.id  + '_' + img.secret+ '_b.jpg';
     $('#hidden').attr("src", url).load(function() {
       $('html').css('background', 'url(' + url + ') no-repeat center center fixed').css("background-size", "cover").fadeTo(7500, 1);
+      $('#loading').hide();
     });
     pics.splice(num, 1);
-        setTimeout(function() {
-     $('#loading').hide();
-   }, 200);
+   //      setTimeout(function() {
+   //   $('#loading').hide();
+   // }, 200);
   }
 
   $('#hide').click(function() {
