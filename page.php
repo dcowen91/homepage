@@ -210,6 +210,7 @@
   });
 
   function getPost(postnum) {
+    console.log("in function");
       $.ajax({
           type:"GET",
           url: "getpost.php",
