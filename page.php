@@ -232,8 +232,9 @@
           success: function(message) {
             console.log("success");
             console.log(message);
-             // if (message[0] == 1)
-             // window.location = "index.php";
+            $('#home').hide();
+            $('#blog').show();
+            $('#blog').html('<h1 class="margin-base-vertical">' . message['title'].'</h1> <p>' . message['content'] . '</p>');
           }, 
           error: function(message) {
             console.log("error");
