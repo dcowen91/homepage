@@ -100,6 +100,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-offset-3 panel" id="main">
+        <div id ="home">
         <h1 class="margin-base-vertical">Drew Owen</h1>
         <p> 
           I am a software engineer interested in all things CS.
@@ -110,6 +111,12 @@
         <p>
           Feel free to look around!
         </p>
+      </div>
+      <div id="blog" style="display: none">
+        <p>
+          Blog
+        </p>
+      </div>
       </div>
     </div>
   </div>
