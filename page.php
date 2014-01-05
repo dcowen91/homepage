@@ -88,7 +88,7 @@
     position: relative;
     margin-top: auto;
     display: block;   
-    margin-left: -4 0px;   
+    margin-left: auto;   
     margin-right: auto;
     text-align: center;
     z-index: 2;
@@ -98,7 +98,7 @@
     margin-top: auto;
     display: block;   
     margin-left: auto;   
-    margin-right: 130px;
+    margin-right: auto;
     text-align: center;
     z-index: 2;
   }
