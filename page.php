@@ -4,6 +4,13 @@
     $db = new PDO($dsn);
 
 
+    $users = $db->prepare("
+    SELECT * FROM posts
+    ");
+    $posts->execute();
+    $posts = $posts->fetchAll();
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -195,8 +202,23 @@
 
   $( document ).ready(function() {
     var currentState = window.location.hash;
-    console.log(currentState);
-});
+    //console.log(currentState);   
+  });
+
+  function listenForGameEnd(postnum) {
+      $.ajax({
+          type:"GET",
+          url: "getpost.php",
+          data: {post:  postnum},
+          success: function(message) {
+            console.log(message);
+             // if (message[0] == 1)
+             // window.location = "index.php";
+          }, dataType: "json"
+          
+      });
+      window.setTimeout(listenForGameEnd, 5000);
+  }
 
   </script>
 
