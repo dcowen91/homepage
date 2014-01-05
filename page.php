@@ -175,7 +175,7 @@
 
   $('#bloglink').click(function() {
     console.log("blog link");
-    $('#bloglink').href= "#1";
+    $('#bloglink').attr('href', "#1");
     //TODO: don't hardcode
     getPost(1);
   });
