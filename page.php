@@ -205,6 +205,7 @@
     console.log(postnum);
       $.ajax({
           type:"GET",
+          contentType: "application/json; charset=utf-8",
           url: "getpost.php",
           data: {post: postnum},
           success: function(message) {
