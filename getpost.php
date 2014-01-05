@@ -8,7 +8,7 @@
 
     $query->execute(
          array(
-             ':pid' => $_POST['post'],
+             ':pid' => $_GET['post'],
          )
      );
     $posts = $query->fetch();

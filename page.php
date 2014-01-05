@@ -211,7 +211,7 @@
     console.log("in function");
     console.log(postnum);
       $.ajax({
-          type:"POST",
+          type:"GET",
           contentType: "application/json",
           url: "getpost.php",
           async: false,
