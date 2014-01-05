@@ -173,11 +173,17 @@
     pics.splice(num, 1);
   }
 
+  function getLatestPost() {
+    //TODO: fix this
+    return 1;
+  }
+
+
   $('#bloglink').click(function() {
     console.log("blog link");
     $('#bloglink').attr('href', "#1");
-    //TODO: don't hardcode
-    getPost(1);
+    var num = getLatestPost();
+    getPost(num);
   });
 
   $('#hide').click(function() {
