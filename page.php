@@ -4,11 +4,11 @@
     $db = new PDO($dsn);
 
 
-    $users = $db->prepare("
-    SELECT * FROM posts
-    ");
-    $posts->execute();
-    $posts = $posts->fetchAll();
+    // $users = $db->prepare("
+    // SELECT * FROM posts
+    // ");
+    // $posts->execute();
+    // $posts = $posts->fetchAll();
 
 
 ?>
