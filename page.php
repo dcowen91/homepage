@@ -202,8 +202,8 @@
 
   $( document ).ready(function() {
     var currentState = window.location.hash;
-    listenForGameEnd(postnum);
-    //console.log(currentState);   
+    //listenForGameEnd(currentState);
+    console.log(currentState);   
   });
 
   function listenForGameEnd(postnum) {
