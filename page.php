@@ -204,8 +204,8 @@
     var currentState = window.location.hash;
     if (currentState.indexOf("#") != -1) {
       var state = currentState.substring(1);
+            console.log(state);   
       getPost(state);
-      console.log(state);   
     }
   });
 
@@ -220,9 +220,9 @@
             console.log(message);
              // if (message[0] == 1)
              // window.location = "index.php";
-          }, dataType: "json"
-          
+          }, dataType: "json"          
       });
+      console.log("done");
   }
 
   </script>
