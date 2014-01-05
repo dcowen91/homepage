@@ -84,6 +84,24 @@
     text-align: center;
     display: block;   
   }
+  #leftPost {
+    position: relative;
+    margin-top: -30px;
+    display: block;   
+    margin-left: -30px;   
+    margin-right: auto;
+    text-align: center;
+    z-index: 2;
+  }
+  #rightPost {
+    position: relative;
+    margin-top: -30px;
+    display: block;   
+    margin-left: auto;   
+    margin-right: 30px;
+    text-align: center;
+    z-index: 2;
+  }
 
 
   </style>
@@ -116,8 +134,10 @@
         <p>
           Blog
         </p>
-        <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
-        <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>    
+        <div id="button2">
+          <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
+          <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
+        </div>
       </div>
       </div>
     </div>
