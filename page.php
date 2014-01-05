@@ -92,6 +92,7 @@
     margin-right: auto;
     text-align: center;
     z-index: 2;
+    float: left;
   }
   #rightPost {
     position: relative;
@@ -100,6 +101,7 @@
     margin-left: auto;   
     margin-right: auto;
     text-align: center;
+    float: right;
     z-index: 2;
   }
 
