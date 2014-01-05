@@ -93,7 +93,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a href="#">Home</a></li><li> <a href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+        <li> <a href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
@@ -171,6 +171,13 @@
       $('#loading').hide();
     });
     pics.splice(num, 1);
+  }
+
+  $('bloglink').click(function()) {
+    console.log("blog link");
+    window.location.hash = "#1";
+    //TODO: don't hardcode
+    getpost(1);
   }
 
   $('#hide').click(function() {
