@@ -98,7 +98,7 @@
     margin-top: -20px;
     display: block;   
     margin-left: auto;   
-    margin-right: 60px;
+    margin-right: 90px;
     text-align: center;
     z-index: 2;
   }
