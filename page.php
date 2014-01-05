@@ -204,8 +204,8 @@
     console.log("in function");
     console.log(postnum);
       $.ajax({
-          type:"GET",
-          contentType: "application/json; charset=utf-8",
+          type:"POST",
+          contentType: "application/json",
           url: "getpost.php",
           data: {post: postnum},
           success: function(message) {
