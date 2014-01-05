@@ -234,7 +234,7 @@
             console.log(message);
             $('#home').hide();
             $('#blog').show();
-            $('#blog').html('<h1 class="margin-base-vertical">' . message['title'].'</h1> <p>' . message['content'] . '</p>');
+            $('#blog').html('<h1 class="margin-base-vertical">' + message['title'].'</h1> <p>' + message['content'] + '</p>');
           }, 
           error: function(message) {
             console.log("error");
