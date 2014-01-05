@@ -177,7 +177,7 @@
     console.log("blog link");
     window.location.hash = "#1";
     //TODO: don't hardcode
-    getpost(1);
+    getPost(1);
   });
 
   $('#hide').click(function() {
