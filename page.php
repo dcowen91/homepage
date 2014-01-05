@@ -173,7 +173,7 @@
     pics.splice(num, 1);
   }
 
-  $('bloglink').click(function() {
+  $('#bloglink').click(function() {
     console.log("blog link");
     window.location.hash = "#1";
     //TODO: don't hardcode
