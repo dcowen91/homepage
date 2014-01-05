@@ -117,8 +117,8 @@
     <button id="hide" type="button" class="btn btn-default btn-primary">Hide</button>
     <button id="newpic" type="button" class="btn btn-default btn-primary">New Pic</button>
   </div>
-  <img id="hidden" src="http://sierrafire.cr.usgs.gov/images/loading.gif" alt="background"></img>
-  <img src="http://sierrafire.cr.usgs.gov/images/loading.gif" id="loading" alt="loading" style="display:none"></img>
+  <img id="hidden" src="images/Loading.gif" alt="background"></img>
+  <img src="images/Loading.gif" id="loading" alt="loading" style="display:none"></img>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
   <script type="text/javascript">
