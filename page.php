@@ -93,7 +93,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a href="#">Home</a></li><li> <a id="bloglink">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+        <li> <a href="#">Home</a></li><li> <a id="bloglink" href="">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
