@@ -86,19 +86,19 @@
   }
   #leftPost {
     position: relative;
-    margin-top: -30px;
+    margin-top: -20px;
     display: block;   
-    margin-left: -30px;   
+    margin-left: -40px;   
     margin-right: auto;
     text-align: center;
     z-index: 2;
   }
   #rightPost {
     position: relative;
-    margin-top: -30px;
+    margin-top: -20px;
     display: block;   
     margin-left: auto;   
-    margin-right: 30px;
+    margin-right: 60px;
     text-align: center;
     z-index: 2;
   }
