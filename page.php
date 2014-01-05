@@ -202,11 +202,14 @@
 
   $( document ).ready(function() {
     var currentState = window.location.hash;
-    //listenForGameEnd(currentState);
-    console.log(currentState);   
+    if (currentState.indexOf("#") != -1) {
+      var state = currentState.substring(1);
+      getPost(state);
+      console.log(state);   
+    }
   });
 
-  function listenForGameEnd(postnum) {
+  function getPost(postnum) {
       $.ajax({
           type:"GET",
           url: "getpost.php",
@@ -218,7 +221,6 @@
           }, dataType: "json"
           
       });
-      window.setTimeout(listenForGameEnd, 5000);
   }
 
   </script>
