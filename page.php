@@ -214,6 +214,7 @@
           type:"POST",
           contentType: "application/json",
           url: "getpost.php",
+          async: false,
           data: {post: postnum},
           success: function(message) {
             console.log("success");
