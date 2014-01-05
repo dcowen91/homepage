@@ -128,7 +128,7 @@
     <button id="newpic" type="button" class="btn btn-default btn-primary">New Pic</button>
   </div>
   <img id="hidden" src="" alt="background"></img>
-  <img src="ajax-loader.gif" id="loading" alt="loading" style="display:none" />
+  <img src="ajax-loader.gif" id="loading" style="display:none" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
   <script type="text/javascript">
