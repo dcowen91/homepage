@@ -134,8 +134,8 @@
         <p>
           Blog
         </p>
-          <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
-          <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
+        <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
+        <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
       </div>
       </div>
     </div>
