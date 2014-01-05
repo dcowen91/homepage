@@ -1,3 +1,7 @@
+<?php
+header('Content-Type: image/jpeg');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
