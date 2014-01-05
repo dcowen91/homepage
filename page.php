@@ -216,6 +216,7 @@
           url: "getpost.php",
           data: {post:  postnum},
           success: function(message) {
+            console.log("success");
             console.log(message);
              // if (message[0] == 1)
              // window.location = "index.php";
