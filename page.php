@@ -204,17 +204,18 @@
     var currentState = window.location.hash;
     if (currentState.indexOf("#") != -1) {
       var state = currentState.substring(1);
-            console.log(state);   
+      console.log(state);   
       getPost(state);
     }
   });
 
   function getPost(postnum) {
     console.log("in function");
+    console.log(postnum);
       $.ajax({
           type:"GET",
           url: "getpost.php",
-          data: {post:  postnum},
+          data: {post: postnum},
           success: function(message) {
             console.log("success");
             console.log(message);
