@@ -12,7 +12,7 @@
              ':pid' => $_GET['post'],
          )
      );
-    $posts = $posts->fetch();
+    $posts = $query->fetch();
     echo json_encode($posts);
 
 
