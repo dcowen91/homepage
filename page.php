@@ -212,8 +212,7 @@
     //console.log("blog link");
     $('#bloglink').attr('href', "#1");
     var num = getLatestPost();
-    var post = getPost(num);
-    showBlog(post);
+    getPost(num);
   });
 
   $('#hide').click(function() {
@@ -239,8 +238,8 @@
     if (currentState.indexOf("#") != -1) {
       var state = currentState.substring(1);
       //console.log(state);   
-      var post = getPost(state);
-      showBlog(post);
+      getPost(state);
+      
     }
   });
 
@@ -263,9 +262,7 @@
           async: false,
           data: {post: postnum},
           success: function(message) {
-            //console.log("success");
-            //console.log(message);
-            return message;
+            showBlog(message);
           }, 
           error: function(message) {
             console.log("error");
