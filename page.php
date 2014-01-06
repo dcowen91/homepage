@@ -231,10 +231,10 @@
     setbackground();
   });
 
-  $('#homelink').click(function()) {
+  $('#homelink').click(function() {
     $('#bloglink').attr('href', "");
     showHome();
-  }
+  });
 
 
   $( document ).ready(function() {
