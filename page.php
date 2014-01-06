@@ -113,7 +113,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+        <li> <a id="homelink" href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
@@ -231,6 +231,11 @@
     setbackground();
   });
 
+  $('#homelink').click(function()) {
+    $('#bloglink').attr('href', "");
+    showHome();
+  }
+
 
   $( document ).ready(function() {
     //console.log("ready")
@@ -242,6 +247,13 @@
       
     }
   });
+
+  function showHome() {
+    $('#home').show();
+    $('#blog').hide();
+    $('#leftPost').hide();
+    $('#rightPost').hide(); 
+  }
 
   function showBlog(message) {
     console.log(message);
