@@ -136,8 +136,8 @@
         <p>
           Blog
         </p>
-        <button id="leftPost" type="button" class="btn btn-default-sm btn-primary">Next</button>
-        <button id="rightPost" type="button" class="btn btn-default-sm btn-primary">Prev</button>  
+        <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
+        <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
       </div>
       </div>
     </div>
@@ -209,10 +209,11 @@
 
 
   $('#bloglink').click(function() {
-    console.log("blog link");
+    //console.log("blog link");
     $('#bloglink').attr('href', "#1");
     var num = getLatestPost();
-    getPost(num);
+    var post = getPost(num);
+    showBlog(post);
   });
 
   $('#hide').click(function() {
@@ -233,18 +234,27 @@
 
 
   $( document ).ready(function() {
-    console.log("ready")
+    //console.log("ready")
     var currentState = window.location.hash;
     if (currentState.indexOf("#") != -1) {
       var state = currentState.substring(1);
-      console.log(state);   
-      getPost(state);
+      //console.log(state);   
+      var post = getPost(state);
+      showBlog(post);
     }
   });
 
+  function showBlog(message) {
+    console.log(message);
+  } $('#home').hide();
+            $('#blog').show();
+            $('#leftPost').show();
+            $('#rightPost').show(); 
+            $('#blog').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] + '</p>' + '<button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button> <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>');
+
   function getPost(postnum) {
-    console.log("in function");
-    console.log(postnum);
+    //console.log("in function");
+    //console.log(postnum);
       $.ajax({
           type:"GET",
           contentType: "application/json",
@@ -252,13 +262,9 @@
           async: false,
           data: {post: postnum},
           success: function(message) {
-            console.log("success");
-            console.log(message);
-            $('#home').hide();
-            $('#blog').show();
-            $('#leftPost').show();
-            $('#rightPost').show(); 
-            $('#blog').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] + '</p>' + '<button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button> <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>');
+            //console.log("success");
+            //console.log(message);
+            return message;
           }, 
           error: function(message) {
             console.log("error");
@@ -266,7 +272,7 @@
           },
           dataType: "json"          
       });
-      console.log("done");
+      //console.log("done");
   }
 
   </script>
