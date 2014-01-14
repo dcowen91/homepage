@@ -294,7 +294,6 @@
   }
 
   function seePostExists(num, button) {
-    console.log('testing');
     $.ajax({
           type:"GET",
           contentType: "application/json",
@@ -304,7 +303,7 @@
           success: function(message) {
             console.log(message);
             //console.log ('success' + num);
-            if (message == 'false') {
+            if (!message) {
               button.attr('disabled', true);
             } else {
               button.attr('disabled', false);
