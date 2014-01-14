@@ -302,6 +302,7 @@
           async: false,
           data: {post: num},
           success: function(message) {
+            console.log(message);
             console.log ('success' + num);
             button.attr('disabled', false);
           }, 
