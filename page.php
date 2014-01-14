@@ -294,6 +294,7 @@
   }
 
   function seePostExists(num, button) {
+    console.log('testing');
     $.ajax({
           type:"GET",
           contentType: "application/json",
