@@ -303,12 +303,16 @@
           data: {post: num},
           success: function(message) {
             console.log(message);
-            console.log ('success' + num);
-            button.attr('disabled', false);
+            //console.log ('success' + num);
+            if (message === 'false') {
+              button.attr('disabled', true);
+            } else {
+              button.attr('disabled', false);
+            }
           }, 
           error: function(message) {
-            console.log ('fail' + num);
-            button.attr('disabled', true);
+            // console.log ('fail' + num);
+            // button.attr('disabled', true);
           },
           dataType: "json"          
       });
