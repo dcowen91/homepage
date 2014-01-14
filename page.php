@@ -257,6 +257,7 @@
 
   function showBlog(message) {
     console.log(message);
+    console.log(message['posted']);
     $('#home').hide();
     $('#blog').show();
     $('#leftPost').show();
