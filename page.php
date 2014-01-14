@@ -256,7 +256,7 @@
   }
 
   function showBlog(message) {
-    console.log(message);
+    //console.log(message);
     //console.log(message['posted']);
     $('#home').hide();
     $('#blog').show();
@@ -301,7 +301,7 @@
           async: false,
           data: {post: num},
           success: function(message) {
-            console.log(message);
+            //console.log(message);
             //console.log ('success' + num);
             if (!message) {
               button.attr('disabled', true);

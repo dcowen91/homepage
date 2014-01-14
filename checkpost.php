@@ -3,7 +3,7 @@
     $db = new PDO($dsn);
 
     $query = $db->prepare("
-    SELECT * FROM posts WHERE postnum = :pid
+    SELECT postnum FROM posts WHERE postnum = :pid
     ");
 
     $query->execute(
