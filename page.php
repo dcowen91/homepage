@@ -262,7 +262,7 @@
     $('#blog').show();
     $('#leftPost').show();
     $('#rightPost').show();
-    Date posted = message['posted'] ;
+    var posted = new Date(message['posted']);
     $('#blog').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] + '</p>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '<button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button> <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>');
   }
 
