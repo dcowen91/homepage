@@ -304,7 +304,7 @@
           success: function(message) {
             console.log(message);
             //console.log ('success' + num);
-            if (message === 'false') {
+            if (message == 'false') {
               button.attr('disabled', true);
             } else {
               button.attr('disabled', false);
