@@ -301,10 +301,10 @@
           async: false,
           data: {post: num},
           success: function(message) {
-            button.prop('disabled', false);
+            button.attr('disabled', false);
           }, 
           error: function(message) {
-            button.prop('disabled', true);
+            button.attr('disabled', true);
           },
           dataType: "json"          
       });
