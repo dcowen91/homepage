@@ -263,7 +263,7 @@
     $('#leftPost').show();
     $('#rightPost').show();
     var posted = new Date(message['posted']);
-    $('#blog').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] + '</p>' + '<small> <em>' + posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</small </em>'+ '<button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button> <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>');
+    $('#blog').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '<small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + ' </small </em> </p> ' + '<button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button> <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>');
   }
 
   function getPost(postnum) {
