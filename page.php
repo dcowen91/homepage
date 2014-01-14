@@ -301,9 +301,11 @@
           async: false,
           data: {post: num},
           success: function(message) {
+            console.log ('success' + num);
             button.attr('disabled', false);
           }, 
           error: function(message) {
+            console.log ('fail' + num);
             button.attr('disabled', true);
           },
           dataType: "json"          
