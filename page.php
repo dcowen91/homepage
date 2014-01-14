@@ -257,12 +257,13 @@
 
   function showBlog(message) {
     console.log(message);
-    console.log(message['posted']);
+    //console.log(message['posted']);
     $('#home').hide();
     $('#blog').show();
     $('#leftPost').show();
-    $('#rightPost').show(); 
-    $('#blog').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] + '</p>' + 'posted at ' + message['posted'] + '<button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button> <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>');
+    $('#rightPost').show();
+    Date posted = message['posted'] ;
+    $('#blog').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] + '</p>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '<button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button> <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>');
   }
 
   function getPost(postnum) {
