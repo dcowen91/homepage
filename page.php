@@ -299,7 +299,7 @@
           contentType: "application/json",
           url: "checkpost.php",
           async: false,
-          data: {post: postnum},
+          data: {post: num},
           success: function(message) {
             button.prop('disabled', false);
           }, 
