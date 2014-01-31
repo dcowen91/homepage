@@ -13,7 +13,7 @@
   <style>
 
   html {
-    background: images/Chief.png no-repeat center center fixed;      
+    background: url('images/Chief.png') no-repeat center center fixed;      
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
