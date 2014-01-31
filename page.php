@@ -13,7 +13,7 @@
   <style>
 
   html {
-    background: white no-repeat center center fixed;      
+    background: images/Chief.png no-repeat center center fixed;      
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -189,6 +189,7 @@
     pics = response.photos.photo;
     console.log("got the pics")
     //setbackground();
+
   }
 
 
