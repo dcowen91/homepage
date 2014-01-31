@@ -187,6 +187,7 @@
   function jsonFlickrApi (response) {
     $('#loading').show();
     pics = response.photos.photo;
+    console.log("got the pics")
     //setbackground();
   }
 
