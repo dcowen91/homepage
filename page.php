@@ -46,11 +46,12 @@ header('X-Frame-Options: GOFORIT');
         <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
       </div>
       <div id="contact" style="display: none">
-        <a href="resume.pdf">Direct Link</a>
+
+        <!-- Mussing around with PDF display -->
+        <!-- <div><a href="resume.pdf">Direct Link</a></div>
         <object class='pdf' data="resume.pdf" type="application/pdf">
             <embed class='pdf' src="resume.pdf" type="application/pdf"/>
-        </object>
-        <!-- <embed src="resume.pdf"  type='application/pdf' width="auto" height="aurto"> -->
+        </object> -->
       </div>
       </div>
     </div>
