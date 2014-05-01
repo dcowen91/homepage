@@ -112,7 +112,7 @@ h1 {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
         font-family:si;
-        src: url(PATH_TO/socicon.svg) format(svg);
+        src: url(images/socicon/socicon.svg) format(svg);
     }
 }
 

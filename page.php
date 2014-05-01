@@ -19,7 +19,7 @@ header('X-Frame-Options: GOFORIT');
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a id='projectlink' href="#">Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
@@ -48,6 +48,7 @@ header('X-Frame-Options: GOFORIT');
         <div id="contact" style="display: none">
           <h1 class="margin-base-vertical">Drew Owen</h1>
           Contact me via<br> <a href="mailto:dcowen@email.arizona.edu" target="_newtab">Email</a>, <a href="https://www.facebook.com/drew.owen.5" target="_newtab">Facebook</a>, <a href="https://www.linkedin.com/pub/andrew-owen/45/6ba/47a" target="_newtab">LinkedIn</a>, or <a href="https://github.com/dcowen91" target="_newtab">GitHub</a>.
+          <br>
           <ul class="soc">
             <li><a class="soc-email2" href="mailto:dcowen@email.arizona.edu" target="_newtab"></a></li>
             <li><a class="soc-facebook" href="https://www.facebook.com/drew.owen.5" target="_newtab"></a></li>
@@ -59,6 +60,12 @@ header('X-Frame-Options: GOFORIT');
           <object class='pdf' data="resume.pdf" type="application/pdf">
               <embed class='pdf' src="resume.pdf" type="application/pdf"/>
           </object> -->
+        </div>
+        <div id="project" style="display: none">
+          <h1 class="margin-base-vertical">Projects</h1>
+          <p>
+            Unfortunately, working during school hasn't left me with much time for personal projects. Although, be sure to check out my <a href="https://github.com/dcowen91" target="_newtab">GitHub</a> for a few odds and ends!
+          </p>
         </div>
       </div>
     </div>
@@ -129,13 +136,23 @@ header('X-Frame-Options: GOFORIT');
     return 1;
   }
 
-  $('#contactlink').click(function() {
+  function hideAll() {
     $('#home').hide();
     $('#blog').hide();
+    $('#contact').hide();
+    $('#project').hide();
+  }
+
+  $('#contactlink').click(function() {
+    hideAll();
     $('#contact').show();
     
   });
 
+  $("#projectlink").click(function() {
+    hideAll();
+    $('#project').show();
+  });
 
   $('#bloglink').click(function() {
     //console.log("blog link");
@@ -181,16 +198,15 @@ header('X-Frame-Options: GOFORIT');
   });
 
   function showHome() {
+    hideAll();
     $('#home').show();
-    $('#blog').hide();
-    $('#contact').hide();
   }
+
 
   function showBlog(message) {
     //console.log(message);
     //console.log(message['posted']);
-    $('#home').hide();
-    $('#contact').hide();
+    hideAll();
     $('#blog').show();
     $('#leftPost').show();
     $('#rightPost').show();
@@ -236,9 +252,9 @@ header('X-Frame-Options: GOFORIT');
             //console.log(message);
             //console.log ('success' + num);
             if (!message) {
-              button.attr('disabled', true);
+              button.hide();
             } else {
-              button.attr('disabled', false);
+              button.show();
             }
           }, 
           error: function(message) {
