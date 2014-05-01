@@ -46,6 +46,7 @@ header('X-Frame-Options: GOFORIT');
         <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
       </div>
       <div id="contact" style="display: none">
+        <a href="resume.pdf">Direct Link</a>
         <object class='pdf' data="resume.pdf" type="application/pdf">
             <embed class='pdf' src="resume.pdf" type="application/pdf"/>
         </object>
