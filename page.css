@@ -1,0 +1,93 @@
+html {
+  background: white no-repeat center center fixed;      
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Open Sans",serif;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans",serif;
+  background: transparent;
+  overflow:hidden;
+}
+h1 {
+  font-family: "Abel", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+.panel {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-bottom: 30px;
+  border-radius: 5px;
+}
+
+.margin-base-vertical {
+  margin: 20px 0;
+}
+
+.pull-right {
+  float: right;
+}
+
+.inline {
+  padding-right: 20px;
+}
+
+.inline  > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#main {
+  margin-top: -70px;
+  z-index: 1;
+  padding-bottom: 20px;
+}
+
+#hidden {
+  display: none;
+}
+
+#button {
+  position: relative;
+  margin-top: -30px;
+  display: block;   
+  margin-left: auto;   
+  margin-right: auto;
+  text-align: center;
+  z-index: 2;
+}
+
+#loading {
+  padding-top: 20px;
+  position: relative;
+  margin-left: auto;   
+  margin-right: auto;
+  text-align: center;
+  display: block;   
+}
+#leftPost {
+  position: relative;
+  margin-top: auto;
+  display: block;   
+  margin-left: auto;   
+  margin-right: auto;
+  text-align: center;
+  z-index: 2;
+  float: left;
+}
+#rightPost {
+  position: relative;
+  margin-top: auto;
+  display: block;   
+  margin-left: auto;   
+  margin-right: auto;
+  text-align: center;
+  float: right;
+  z-index: 2;
+}
+
