@@ -1,5 +1,6 @@
 <?php
 //header('Content-Type: image/jpeg');
+header('X-Frame-Options: GOFORIT'); 
 ?>
 
 <!DOCTYPE html>
