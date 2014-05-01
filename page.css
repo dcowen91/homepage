@@ -139,16 +139,27 @@ h1 {
     -ms-box-sizing:border-box;
     -o-box-sizing:border-box;
     box-sizing:border-box;
+
+    -o-transition:.1s;
+    -ms-transition:.1s;
+    -moz-transition:.1s;
+    -webkit-transition:.1s;
+    transition:.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
     overflow:hidden;
     text-decoration:none;
     text-align:center;
     display:block;
     position: relative;
     z-index: 1;
-    width: 53px;
-    height: 53px;
-    line-height: 53px;
-    font-size: 29px;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 20px;
     -webkit-border-radius: 21px;
     -moz-border-radius: 21px;
     border-radius: 21px;
@@ -157,11 +168,13 @@ h1 {
     background-color: #428bca;
 }
 
+
 .soc a:hover {
     z-index: 2;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+
 
 .soc-icon-last{
     margin:0 !important;
