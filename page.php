@@ -13,7 +13,7 @@
   <style>
 
   html {
-    background: white no-repeat center center fixed;      
+    background: url('images/Chief.png') no-repeat center center fixed;      
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -146,7 +146,7 @@
     <button id="hide" type="button" class="btn btn-default btn-primary">Hide</button>
     <button id="newpic" type="button" class="btn btn-default btn-primary">New Pic</button>
   </div>
-  <img id="hidden" src="images/Loading.gif" alt="background">
+  <img id="hidden" src="images/Chief.png" alt="background">
   <img src="images/Loading.gif" id="loading" alt="loading" style="display:none">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
@@ -187,7 +187,10 @@
   function jsonFlickrApi (response) {
     $('#loading').show();
     pics = response.photos.photo;
-    setbackground();
+    console.log("got the pics")
+    $('#loading').hide();
+    //setbackground();
+
   }
 
 
