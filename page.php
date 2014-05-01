@@ -17,8 +17,8 @@
 <body>
   <div class="panel">
     <div class="row pull-right">
-      <ul class="nav nav-pills">
-        <li class'active'> <a id="homelink" href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+      <ul class="inline">
+        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
