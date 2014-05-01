@@ -27,32 +27,33 @@ header('X-Frame-Options: GOFORIT');
     <div class="row">
       <div class="col-lg-6 col-offset-3 panel" id="main">
         <div id ="home">
-        <h1 class="margin-base-vertical">Drew Owen</h1>
-        <p> 
-          I am a software engineer interested in all things CS.
-        </p>
-        <p>
-          I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
-        </p>
-        <p>
-          Feel free to look around!
-        </p>
-      </div>
-      <div id="blog" style="display: none">
-        <p>
-          Blog
-        </p>
-        <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
-        <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
-      </div>
-      <div id="contact" style="display: none">
-
-        <!-- Mussing around with PDF display -->
-        <!-- <div><a href="resume.pdf">Direct Link</a></div>
-        <object class='pdf' data="resume.pdf" type="application/pdf">
-            <embed class='pdf' src="resume.pdf" type="application/pdf"/>
-        </object> -->
-      </div>
+          <h1 class="margin-base-vertical">Drew Owen</h1>
+          <p> 
+            I am a software engineer interested in all things CS.
+          </p>
+          <p>
+            I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
+          </p>
+          <p>
+            Feel free to look around!
+          </p>
+        </div>
+        <div id="blog" style="display: none">
+          <p>
+            Blog
+          </p>
+          <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
+          <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
+        </div>
+        <div id="contact" style="display: none">
+          <h1 class="margin-base-vertical">Drew Owen</h1>
+          wtf mate
+          <!-- Mussing around with PDF display -->
+          <!-- <div><a href="resume.pdf">Direct Link</a></div>
+          <object class='pdf' data="resume.pdf" type="application/pdf">
+              <embed class='pdf' src="resume.pdf" type="application/pdf"/>
+          </object> -->
+        </div>
       </div>
     </div>
   </div>
@@ -123,7 +124,6 @@ header('X-Frame-Options: GOFORIT');
   }
 
   $('#contactlink').click(function() {
-    console.log("derp");
     $('#home').hide();
     $('#blog').hide();
     $('#contact').show();
