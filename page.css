@@ -91,3 +91,7 @@ h1 {
   z-index: 2;
 }
 
+.pdf {
+  width: auto;
+  height: auto;
+}
