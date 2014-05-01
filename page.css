@@ -100,11 +100,11 @@ h1 {
 /*social icons*/
 @font-face {
     font-family:si;
-    src:    url(PATH_TO/socicon.eot?#iefix) 
+    src:    url(images/socicon/socicon.eot?#iefix) 
                 format(embedded-opentype),
-            url(PATH_TO/socicon.woff) format(woff),
-            url(PATH_TO/socicon.ttf) format(truetype),
-            url(PATH_TO/socicon.svg) format(svg);
+            url(images/socicon/socicon.woff) format(woff),
+            url(images/socicon/socicon.ttf) format(truetype),
+            url(images/socicon/socicon.svg) format(svg);
     font-weight:400;
     font-style:normal;
 }
