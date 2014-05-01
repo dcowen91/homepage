@@ -39,11 +39,22 @@ header('X-Frame-Options: GOFORIT');
           </p>
         </div>
         <div id="blog" style="display: none">
-          <p>
-            Blog
-          </p>
-          <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
-          <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
+          <div id="blogInner" style="display: none">
+          </div>
+          <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'dowenblog'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
         <div id="contact" style="display: none">
           <h1 class="margin-base-vertical">Drew Owen</h1>
@@ -211,7 +222,7 @@ header('X-Frame-Options: GOFORIT');
     $('#leftPost').show();
     $('#rightPost').show();
     var posted = new Date(message['posted']);
-    $('#blog').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</br> </small> </em> ' + '<button id="leftPost" type="button" class="btn btn-primary btn-xs">Next</button> <button id="rightPost" type="button" class="btn btn-primary btn-xs">Prev</button>');
+    $('#blogInner').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</br> </small> </em> ' + '<button id="leftPost" type="button" class="btn btn-primary btn-xs">Next</button> <button id="rightPost" type="button" class="btn btn-primary btn-xs">Prev</button>');
     //checkButtonDisable(message['postnum']);
   }
 
