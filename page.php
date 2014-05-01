@@ -48,10 +48,10 @@ header('X-Frame-Options: GOFORIT');
         <div id="contact" style="display: none">
           <h1 class="margin-base-vertical">Drew Owen</h1>
           <ul class="soc">
-            <li><a class="soc-facebook" href="https://www.facebook.com/drew.owen.5"></a></li>
-            <li><a class="soc-email2" href="mailto:dcowen@email.arizona.edu"></a></li>
-            <li><a class="soc-linkedin" href="https://www.linkedin.com/pub/andrew-owen/45/6ba/47a"></a></li>
-            <li><a class="soc-github soc-icon-last" href="https://github.com/dcowen91"></a></li>
+            <li><a class="soc-facebook" href="https://www.facebook.com/drew.owen.5" target="_newtab"></a></li>
+            <li><a class="soc-email2" href="mailto:dcowen@email.arizona.edu" target="_newtab"></a></li>
+            <li><a class="soc-linkedin" href="https://www.linkedin.com/pub/andrew-owen/45/6ba/47a" target="_newtab"></a></li>
+            <li><a class="soc-github soc-icon-last" href="https://github.com/dcowen91" target="_newtab"></a><ahref="https://github.com/dcowen91" target="_newtab">Github</a></li>
           </ul>
           <!-- Mussing around with PDF display -->
           <!-- <div><a href="resume.pdf">Direct Link</a></div>
