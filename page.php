@@ -8,7 +8,7 @@
   <title>Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+  <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" /> -->
   <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="page.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" rel="script"></script>
@@ -18,7 +18,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a id="homelink" href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+        <li> <a id="homelink" href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a href="#">Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
@@ -43,6 +43,9 @@
         </p>
         <button id="leftPost" type="button" class="btn btn-default btn-primary">Next</button>
         <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
+      </div>
+      <div id="contact" style="display: none">
+        text text text
       </div>
       </div>
     </div>
@@ -112,6 +115,12 @@
     //TODO: fix this
     return 1;
   }
+
+  $('#contactlink').click(function() {
+    console.log("derp");
+    $('#home').hide();
+    $('#blog').hide();
+  });
 
 
   $('#bloglink').click(function() {
