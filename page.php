@@ -47,7 +47,12 @@ header('X-Frame-Options: GOFORIT');
         </div>
         <div id="contact" style="display: none">
           <h1 class="margin-base-vertical">Drew Owen</h1>
-          wtf mate
+          <ul class="soc">
+            <li><a class="soc-facebook" href="#"></a></li>
+            <li><a class="soc-email2" href="#"></a></li>
+            <li><a class="soc-linkedin" href="#"></a></li>
+            <li><a class="soc-github soc-icon-last" href="#"></a></li>
+          </ul>
           <!-- Mussing around with PDF display -->
           <!-- <div><a href="resume.pdf">Direct Link</a></div>
           <object class='pdf' data="resume.pdf" type="application/pdf">
