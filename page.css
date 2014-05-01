@@ -97,6 +97,10 @@ h1 {
 }
 
 
+#dsq-2 {
+  height: auto;
+}
+
 /*social icons*/
 @font-face {
     font-family:si;
