@@ -120,6 +120,8 @@
     console.log("derp");
     $('#home').hide();
     $('#blog').hide();
+    $('#contact').show();
+    
   });
 
 
@@ -169,14 +171,14 @@
   function showHome() {
     $('#home').show();
     $('#blog').hide();
-    $('#leftPost').hide();
-    $('#rightPost').hide(); 
+    $('#contact').hide();
   }
 
   function showBlog(message) {
     //console.log(message);
     //console.log(message['posted']);
     $('#home').hide();
+    $('#contact').hide();
     $('#blog').show();
     $('#leftPost').show();
     $('#rightPost').show();
