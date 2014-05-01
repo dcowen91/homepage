@@ -53,7 +53,7 @@
   <img id="hidden" src="images/Chief.png" alt="background">
   <img src="images/Loading.gif" id="loading" alt="loading" style="display:none">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" rel="script"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js" rel="script"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.js" rel="script"></script>
   <script type="text/javascript">
 
   var pics;
