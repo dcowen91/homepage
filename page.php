@@ -45,7 +45,7 @@
         <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
       </div>
       <div id="contact" style="display: none">
-        text text text
+        <iframe src="http://docs.google.com/gview?url=http://fast-reaches-4276.herokuapp.com/resume.pdf&embedded=true" style="width:718px; height:700px;" frameborder="0"></iframe>
       </div>
       </div>
     </div>
