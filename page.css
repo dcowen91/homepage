@@ -100,11 +100,11 @@ h1 {
 /*social icons*/
 @font-face {
     font-family:si;
-    src:    url(images/socicon/socicon.eot?#iefix) 
+    src:    url(PATH_TO/socicon.eot?#iefix) 
                 format(embedded-opentype),
-            url(images/socicon/socicon.woff) format(woff),
-            url(images/socicon/socicon.ttf) format(truetype),
-            url(images/socicon/socicon.svg) format(svg);
+            url(PATH_TO/socicon.woff) format(woff),
+            url(PATH_TO/socicon.ttf) format(truetype),
+            url(PATH_TO/socicon.svg) format(svg);
     font-weight:400;
     font-style:normal;
 }
@@ -112,7 +112,7 @@ h1 {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
         font-family:si;
-        src: url(images/socicon/socicon.svg) format(svg);
+        src: url(PATH_TO/socicon.svg) format(svg);
     }
 }
 
@@ -145,13 +145,13 @@ h1 {
     display:block;
     position: relative;
     z-index: 1;
-    width: 77px;
-    height: 77px;
-    line-height: 77px;
-    font-size: 42px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+    width: 53px;
+    height: 53px;
+    line-height: 53px;
+    font-size: 29px;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    border-radius: 21px;
     margin-right: 38px;
     color: #ffffff;
     background-color: #428bca;
