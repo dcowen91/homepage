@@ -13,7 +13,6 @@
   <link rel="stylesheet" type="text/css" href="page.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.js" rel="script"></script>
-
 </head>
 <body>
   <div class="panel">
