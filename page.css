@@ -91,14 +91,9 @@ h1 {
   z-index: 2;
 }
 
-.pdf {
-  width: auto;
-  height: auto;
-}
-
 
 #dsq-2 {
-  height: auto;
+  height: auto !important;
 }
 
 /*social icons*/
