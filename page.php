@@ -46,8 +46,8 @@ header('X-Frame-Options: GOFORIT');
         <button id="rightPost" type="button" class="btn btn-default btn-primary">Prev</button>  
       </div>
       <div id="contact" style="display: none">
-        <object data="abc.pdf" type="application/pdf" width="auto" height="auto">
-            <embed src="abc.pdf" type="application/pdf" width="auto" height="auto"/>
+        <object data="resume.pdf" type="application/pdf" width="auto" height="auto">
+            <embed src="resume.pdf" type="application/pdf" width="auto" height="auto"/>
         </object>
         <!-- <embed src="resume.pdf"  type='application/pdf' width="auto" height="aurto"> -->
       </div>
