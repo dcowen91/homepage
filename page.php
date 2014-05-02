@@ -245,8 +245,10 @@
   }
 
   function checkButtonDisable(postnum) {
-    seePostExists(postnum + 1, $('#leftPost'));
-    seePostExists(postnum - 1, $('#rightPost'));
+    var plus = postnum + 1;
+    var minus = postnum - 1;
+    seePostExists(plus, $('#leftPost'));
+    seePostExists(minus, $('#rightPost'));
   }
 
   function seePostExists(num, button) {
