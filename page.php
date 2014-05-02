@@ -248,9 +248,14 @@
           url: "getpost.php",
           data: {post: postnum},
           success: function(message) {
-            console.log(message);
-            showBlog(message);
-            checkButtonDisable(postnum);
+            if (message == false) {
+              $("#bloglink").click();
+            }
+            else {
+              console.log(message);
+              showBlog(message);
+              checkButtonDisable(postnum);
+            }
           }, 
           error: function(message) {
             console.log("error");
