@@ -154,14 +154,14 @@
 
   function rightClick() {
     // - 1
-    num = window.location.hash - 1;
+    num = parseInt(window.location.hash) - 1;
     window.location.hash = num;
     getPost(num);
   }
 
   function leftClick() {
     // +  1
-    num = window.location.hash + 1;
+    num = parseInt(window.location.hash) + 1;
     window.location.hash = num;
     getPost(num);
 
