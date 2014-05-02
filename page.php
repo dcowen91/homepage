@@ -159,7 +159,7 @@
       url: "getLatestPost.php",
       success: function(message) {
         num = message["postnum"];
-        $('#bloglink').attr('href', "#" + num);
+        window.location.hash = num;
         getPost(num);
         checkButtonDisable(num);
 
@@ -190,7 +190,7 @@
   });
 
   $('#homelink').click(function() {
-    $('#bloglink').attr('href', "");
+    window.location.hash = "";
     showHome();
   });
 
