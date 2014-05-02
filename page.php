@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Landing Page</title>
+  <title>Drew Owen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet" />
   <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" /> -->
@@ -262,7 +262,6 @@
                             this.page.url = window.location.href;
                         }
                     });
-                };
             }
           }, 
           error: function(message) {
