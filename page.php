@@ -39,6 +39,7 @@
           <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_shortname = 'dowenblog';
+                var disqus_identifier = window.location.hash;
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
