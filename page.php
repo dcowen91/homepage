@@ -67,7 +67,7 @@
         <div id="project" style="display: none">
           <h1 class="margin-base-vertical">Projects</h1>
           <p>
-            Unfortunately, working during school hasn't left me with much time for personal projects. Although, be sure to check out my <a href="https://github.com/dcowen91" target="_newtab">GitHub</a> for a few odds and ends!
+            Check out my various odds and ends on <a href="https://github.com/dcowen91" target="_newtab">GitHub</a>!
           </p>
         </div>
       </div>
@@ -122,7 +122,6 @@
 
   }
 
-
   function setbackground() {
     var num = Math.floor(Math.random()*pics.length);
     var img = pics[num];
@@ -160,9 +159,22 @@
   $('#bloglink').click(function() {
     //console.log("blog link");
     $('#bloglink').attr('href', "#1");
-    var num = getLatestPost();
-    getPost(num);
-    checkButtonDisable(num);
+    $.ajax({
+      type: "GET",
+      contentType: "application/json",
+      url: "getLatestPost.php",
+      success: function(message) {
+        // num = TODO
+        getPost(num);
+        checkButtonDisable(num);
+
+      }, 
+      error: function(message) {
+        console.log("error");
+        console.log(message);
+      },
+      dataType: "json"
+    });
 
   });
 
@@ -196,7 +208,6 @@
       //console.log(state);   
       getPost(state);
       checkButtonDisable(state);
-      
     }
   });
 
@@ -226,7 +237,6 @@
           type:"GET",
           contentType: "application/json",
           url: "getpost.php",
-          async: false,
           data: {post: postnum},
           success: function(message) {
             showBlog(message);
@@ -242,7 +252,7 @@
 
   function checkButtonDisable(postnum) {
     seePostExists(postnum + 1, $('#leftPost'));
-    seePostExists(postnum - 1, $('#rightPost'));
+    seePostExists(postnum  1, $('#rightPost'));
   }
 
   function seePostExists(num, button) {

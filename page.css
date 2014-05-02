@@ -91,11 +91,6 @@ h1 {
   z-index: 2;
 }
 
-
-#dsq-2 {
-  height: auto !important;
-}
-
 /*social icons*/
 @font-face {
     font-family:si;
