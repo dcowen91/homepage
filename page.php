@@ -233,7 +233,7 @@
           data: {post: postnum},
           success: function(message) {
             showBlog(message);
-            checkButtonDisable(num);
+            checkButtonDisable(postnum);
           }, 
           error: function(message) {
             console.log("error");
