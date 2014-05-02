@@ -46,16 +46,6 @@
                     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
-
-                reset = function (newIdentifier, newUrl) {
-                    DISQUS.reset({
-                        reload: true,
-                        config: function () {
-                            this.page.identifier = newIdentifier;
-                            this.page.url = newUrl;
-                        }
-                    });
-                };
               </script>
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
@@ -92,7 +82,6 @@
   <img id="hidden" src="images/Chief.png" alt="background">
   <img src="images/Loading.gif" id="loading" alt="loading" style="display:none">
   <script type="text/javascript">
-  var reset;
   var pics;
   var url;
 
@@ -266,7 +255,14 @@
             else {
               showBlog(message);
               checkButtonDisable(postnum);
-              reset(postnum, window.location.href);
+              DISQUS.reset({
+                        reload: true,
+                        config: function () {
+                            this.page.identifier = postnum;
+                            this.page.url = window.location.href;
+                        }
+                    });
+                };
             }
           }, 
           error: function(message) {
