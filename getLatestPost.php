@@ -5,11 +5,7 @@
 		SELECT postnum FROM posts ORDER BY postnum DESC LIMIT 1
 	");
 
-	 $query->execute(
-         array(
-             ':pid' => $_GET['post'],
-         )
-     );
+	 $query->execute();
 
      $num = $query->fetch();
      echo json_encode($num);
