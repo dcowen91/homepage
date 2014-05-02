@@ -154,14 +154,14 @@
 
   function rightClick() {
     // - 1
-    num = parseInt(window.location.hash) - 1;
+    num = parseInt(window.location.hash.substring(1)) - 1;
     window.location.hash = num;
     getPost(num);
   }
 
   function leftClick() {
     // +  1
-    num = parseInt(window.location.hash) + 1;
+    num = parseInt(window.location.hash.substring(1)) + 1;
     window.location.hash = num;
     getPost(num);
 
@@ -248,6 +248,7 @@
           url: "getpost.php",
           data: {post: postnum},
           success: function(message) {
+            console.log(message);
             showBlog(message);
             checkButtonDisable(postnum);
           }, 
