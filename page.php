@@ -165,15 +165,15 @@
 
   function rightClick() {
     // - 1
-    num = parseInt(window.location.hash.substring(2)) - 1;
-    window.location.hash = "!" + num;
+    num = parseInt(window.location.hash.substring(3)) - 1;
+    window.location.hash = "!/" + num;
     getPost(num);
   }
 
   function leftClick() {
     // +  1
-    num = parseInt(window.location.hash.substring(2)) + 1;
-    window.location.hash = "!" + num;
+    num = parseInt(window.location.hash.substring(3)) + 1;
+    window.location.hash = "!/" + num;
     getPost(num);
 
   }
@@ -186,7 +186,7 @@
       url: "getLatestPost.php",
       success: function(message) {
         num = message["postnum"];
-        window.location.hash = "!" + num;
+        window.location.hash = "!/" + num;
         getPost(num);
 
       }, 
@@ -225,7 +225,7 @@
     //console.log("ready")
     var currentState = window.location.hash;
     if (currentState.indexOf("#") != -1) {
-      var state = parseInt(currentState.substring(2));
+      var state = parseInt(currentState.substring(3));
       //console.log(state);   
       getPost(state);
     }
@@ -311,7 +311,7 @@
   window.onhashchange = function(){
     var currentState = window.location.hash;
     if (currentState.indexOf("#") != -1) {
-      var state = parseInt(currentState.substring(2));
+      var state = parseInt(currentState.substring(3));
       //console.log(state);   
       getPost(state);
     }
