@@ -14,8 +14,4 @@
      $num = $query->fetch();
      echo json_encode($num);
 
-
-
-
-
 ?>

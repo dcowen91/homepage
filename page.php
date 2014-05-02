@@ -133,11 +133,6 @@
     pics.splice(num, 1);
   }
 
-  function getLatestPost() {
-    //TODO: fix this
-    return 1;
-  }
-
   function hideAll() {
     $('#home').hide();
     $('#blog').hide();
@@ -164,9 +159,10 @@
       contentType: "application/json",
       url: "getLatestPost.php",
       success: function(message) {
-        // num = TODO
-        getPost(num);
-        checkButtonDisable(num);
+        // num = message
+        console.log(message)
+        // getPost(num);
+        // checkButtonDisable(num);
 
       }, 
       error: function(message) {
@@ -252,7 +248,7 @@
 
   function checkButtonDisable(postnum) {
     seePostExists(postnum + 1, $('#leftPost'));
-    seePostExists(postnum  1, $('#rightPost'));
+    seePostExists(postnum - 1, $('#rightPost'));
   }
 
   function seePostExists(num, button) {
