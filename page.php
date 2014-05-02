@@ -159,7 +159,6 @@
       contentType: "application/json",
       url: "getLatestPost.php",
       success: function(message) {
-        var result = JSON.parse(message);
         num = message["postnum"];
         console.log(num);
         getPost(num);
