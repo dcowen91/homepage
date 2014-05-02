@@ -46,7 +46,7 @@
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
 
-                var reset = function (newIdentifier, newUrl) {
+                reset = function (newIdentifier, newUrl) {
                     DISQUS.reset({
                         reload: true,
                         config: function () {
@@ -91,6 +91,7 @@
   <img id="hidden" src="images/Chief.png" alt="background">
   <img src="images/Loading.gif" id="loading" alt="loading" style="display:none">
   <script type="text/javascript">
+  var reset;
   var pics;
   var url;
 
@@ -315,16 +316,6 @@
       getPost(state);
     }
   }
-
-  var reset = function (newIdentifier, newUrl) {
-    DISQUS.reset({
-        reload: true,
-        config: function () {
-            this.page.identifier = newIdentifier;
-            this.page.url = newUrl;
-        }
-    });
-  };
 
 
   </script>
