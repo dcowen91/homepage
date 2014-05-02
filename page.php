@@ -153,14 +153,13 @@
 
   $('#bloglink').click(function() {
     //console.log("blog link");
-    $('#bloglink').attr('href', "#1");
     $.ajax({
       type: "GET",
       contentType: "application/json",
       url: "getLatestPost.php",
       success: function(message) {
         num = message["postnum"];
-        console.log(num);
+        $('#bloglink').attr('href', "#" + num);
         getPost(num);
         checkButtonDisable(num);
 
