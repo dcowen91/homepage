@@ -161,7 +161,6 @@
         num = message["postnum"];
         window.location.hash = num;
         getPost(num);
-        checkButtonDisable(num);
 
       }, 
       error: function(message) {
@@ -202,7 +201,6 @@
       var state = currentState.substring(1);
       //console.log(state);   
       getPost(state);
-      checkButtonDisable(state);
     }
   });
 
@@ -235,6 +233,7 @@
           data: {post: postnum},
           success: function(message) {
             showBlog(message);
+            checkButtonDisable(num);
           }, 
           error: function(message) {
             console.log("error");
@@ -273,6 +272,16 @@
           dataType: "json"          
       });
   }
+
+  window.onhashchange = function(){
+    var currentState = window.location.hash;
+    if (currentState.indexOf("#") != -1) {
+      var state = currentState.substring(1);
+      //console.log(state);   
+      getPost(state);
+    }
+  }
+
 
   </script>
 
