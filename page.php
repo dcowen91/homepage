@@ -164,15 +164,15 @@
 
   function rightClick() {
     // - 1
-    num = parseInt(window.location.hash.substring(1)) - 1;
-    window.location.hash = num;
+    num = parseInt(window.location.hash.substring(2)) - 1;
+    window.location.hash = "!" + num;
     getPost(num);
   }
 
   function leftClick() {
     // +  1
-    num = parseInt(window.location.hash.substring(1)) + 1;
-    window.location.hash = num;
+    num = parseInt(window.location.hash.substring(2)) + 1;
+    window.location.hash = "!" + num;
     getPost(num);
 
   }
@@ -185,7 +185,7 @@
       url: "getLatestPost.php",
       success: function(message) {
         num = message["postnum"];
-        window.location.hash = num;
+        window.location.hash = "!" + num;
         getPost(num);
 
       }, 
@@ -224,7 +224,7 @@
     //console.log("ready")
     var currentState = window.location.hash;
     if (currentState.indexOf("#") != -1) {
-      var state = currentState.substring(1);
+      var state = parseInt(currentState.substring(2));
       //console.log(state);   
       getPost(state);
     }
@@ -262,7 +262,6 @@
               $("#bloglink").click();
             }
             else {
-              console.log(message);
               showBlog(message);
               checkButtonDisable(postnum);
               reset(postnum, window.location.href);
@@ -311,7 +310,7 @@
   window.onhashchange = function(){
     var currentState = window.location.hash;
     if (currentState.indexOf("#") != -1) {
-      var state = parseInt(currentState.substring(1));
+      var state = parseInt(currentState.substring(2));
       //console.log(state);   
       getPost(state);
     }
