@@ -159,10 +159,11 @@
       contentType: "application/json",
       url: "getLatestPost.php",
       success: function(message) {
-        // num = message
-        console.log(message)
-        // getPost(num);
-        // checkButtonDisable(num);
+        var result = JSON.parse(message);
+        num = message["postnum"];
+        console.log(num);
+        getPost(num);
+        checkButtonDisable(num);
 
       }, 
       error: function(message) {
