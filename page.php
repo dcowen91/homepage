@@ -39,7 +39,7 @@
           <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_shortname = 'dowenblog';
-                var disqus_identifier = window.location.hash;
+                var disqus_identifier = window.location.href;
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -91,7 +91,6 @@
   <img id="hidden" src="images/Chief.png" alt="background">
   <img src="images/Loading.gif" id="loading" alt="loading" style="display:none">
   <script type="text/javascript">
-
   var pics;
   var url;
 
@@ -317,6 +316,16 @@
       getPost(state);
     }
   }
+
+  var reset = function (newIdentifier, newUrl) {
+    DISQUS.reset({
+        reload: true,
+        config: function () {
+            this.page.identifier = newIdentifier;
+            this.page.url = newUrl;
+        }
+    });
+  });
 
 
   </script>
