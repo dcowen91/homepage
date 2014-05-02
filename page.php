@@ -276,7 +276,7 @@
   window.onhashchange = function(){
     var currentState = window.location.hash;
     if (currentState.indexOf("#") != -1) {
-      var state = currentState.substring(1);
+      var state = parseInt(currentState.substring(1));
       //console.log(state);   
       getPost(state);
     }
