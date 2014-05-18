@@ -91,15 +91,6 @@ h1 {
   z-index: 2;
 }
 
-a { 
-  cursor: pointer; 
-  color: blue; 
-}
-
-a:hover,a.hover { 
-  text-decoration: underline; 
-}
-
 /*social icons*/
 @font-face {
     font-family:si;
