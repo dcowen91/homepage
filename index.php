@@ -311,42 +311,28 @@
   }
 
   window.onpopstate =  function() {
-    console.log(window.location.pathname);
+    // console.log(window.location.pathname);
     var REproj =   /project/;
     var REblog = /blog/;
     var REcont = /contact/;
     hideAll();
 
     if (REproj.test(window.location.pathname)) {
-      // $("#projectlink").click();
       $('#project').show();
     }
     else if (REblog.test(window.location.pathname)) {
-      // $("#bloglink").click();
       $('#blog').show();
       $('#leftPost').show();
       $('#rightPost').show();
       $('#blogInner').show();
     }
     else if (REcont.test(window.location.pathname)) {
-      // $("#contactlink").click();
       $('#contact').show();
     }
     else {
-      $('#home').show();
-      // $("#home").click();
+      $('#home').show();  
     }
   }
-
-  // window.onhashchange = function(){
-  //   var currentState = window.location.hash;
-  //   if (currentState.indexOf("#") != -1) {
-  //     var state = parseInt(currentState.substring(3));
-  //     //console.log(state);   
-  //     getPost(state);
-  //   }
-  // }
-
 
   </script>
 
