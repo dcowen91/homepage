@@ -117,7 +117,7 @@
   function jsonFlickrApi (response) {
     $('#loading').show();
     pics = response.photos.photo;
-    console.log("got the pics")
+    // console.log("got the pics")
     $('#loading').hide();
     //setbackground();
 
@@ -238,7 +238,7 @@
       }
       else {
         var stateObj = {addr : loc};
-        history.replacestate(stateObj, loc.substring(1, loc.length-1), loc);
+        history.replaceState(stateObj, loc.substring(1, loc.length-1), loc);
       }
     }
 
