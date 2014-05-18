@@ -223,7 +223,7 @@
 
 
   $(document).ready(function() {
-    if window.location.search(!= 0) {
+    if (window.location.search!= 0) {
       var loc = window.location.search.split('=')[1];
       parseLocation(loc);
       var REblog = /blog/;
