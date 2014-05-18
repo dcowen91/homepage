@@ -14,7 +14,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a id='projectlink'>Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a id='projectlink' href="" >Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
@@ -144,6 +144,8 @@
   $('#contactlink').click(function() {
     hideAll();
     $('#contact').show();
+    var stateObj = {html : $('#contact').html()};
+    history.pushState(stateObj, "Contact", "/contact/")
     
   });
 
@@ -208,8 +210,11 @@
   });
 
   $('#homelink').click(function() {
-    window.location.hash = "";
-    showHome();
+    hideAll();
+    $('#home').show();
+    var stateObj = {html : $('#home').html()};
+    history.pushState(stateObj, "Home", "/")
+  
   });
 
 
@@ -222,11 +227,6 @@
       getPost(state);
     }
   });
-
-  function showHome() {
-    hideAll();
-    $('#home').show();
-  }
 
 
   function showBlog(message) {
