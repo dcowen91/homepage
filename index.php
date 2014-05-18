@@ -165,6 +165,7 @@
     // - 1
     num = getCurrentPost() - 1;
     getPost(num);
+    var stateObj = {addr : "/blog/" + num};
     history.pushState(stateObj, "Blog", "/blog/" + num);
   }
 
@@ -172,6 +173,7 @@
     // +  1
     num = getCurrentPost() + 1;
     getPost(num);
+    var stateObj = {addr : "/blog/" + num};
     history.pushState(stateObj, "Blog", "/blog/" + num);
 
   }
@@ -185,6 +187,7 @@
       success: function(message) {
         num = message["postnum"];
         getPost(num);
+        var stateObj = {addr : "/blog/" + num};
         history.pushState(stateObj, "Blog", "/blog/" + num);
 
       }, 
@@ -255,9 +258,7 @@
     $('#rightPost').show();
     $('#blogInner').show();
     var posted = new Date(message['posted']);
-    $('#blogInner').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs">Prev</button>');
-    var stateObj = {addr : "/blog/" + message['postnum']};
-  
+    $('#blogInner').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs">Prev</button>');  
   }
 
   function getPost(postnum) {
