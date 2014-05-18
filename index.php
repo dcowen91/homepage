@@ -165,12 +165,14 @@
     // - 1
     num = getCurrentPost() - 1;
     getPost(num);
+    history.pushState(stateObj, "Blog", "/blog/" + num);
   }
 
   function leftClick() {
     // +  1
     num = getCurrentPost() + 1;
     getPost(num);
+    history.pushState(stateObj, "Blog", "/blog/" + num);
 
   }
 
@@ -183,6 +185,7 @@
       success: function(message) {
         num = message["postnum"];
         getPost(num);
+        history.pushState(stateObj, "Blog", "/blog/" + num);
 
       }, 
       error: function(message) {
@@ -214,12 +217,25 @@
     hideAll();
     $('#home').show();
     var stateObj = {addr : "/"};
-    history.pushState(stateObj, "Home", "/")
+    history.pushState(stateObj, "Home", "/");
   
   });
 
 
   $(document).ready(function() {
+    if window.location.search(!= 0) {
+      var loc = window.location.search.split('=')[1];
+      parseLocation(loc);
+      var REblog = /blog/;
+      if (REblog.test(loc)) {
+        var num = loc.substring(6);
+        getPost(num);
+        var stateObj = {addr : loc};
+        history.replacestate(stateObj, "Blog", loc);
+      }
+
+    }
+
     //console.log("ready")
     // var currentState = window.location.hash;
     // if (currentState.indexOf("#") != -1) {
@@ -241,7 +257,6 @@
     var posted = new Date(message['posted']);
     $('#blogInner').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs">Prev</button>');
     var stateObj = {addr : "/blog/" + message['postnum']};
-    history.pushState(stateObj, "Blog", "/blog/" + message['postnum']);
   
   }
 
@@ -311,22 +326,27 @@
   }
 
   window.onpopstate =  function() {
-    // console.log(window.location.pathname);
+    parseLocation(window.location.pathname);
+  }
+
+
+
+  function parseLocation(loc) {
     var REproj =   /project/;
     var REblog = /blog/;
     var REcont = /contact/;
     hideAll();
 
-    if (REproj.test(window.location.pathname)) {
+    if (REproj.test(loc)) {
       $('#project').show();
     }
-    else if (REblog.test(window.location.pathname)) {
+    else if (REblog.test(loc)) {
       $('#blog').show();
       $('#leftPost').show();
       $('#rightPost').show();
       $('#blogInner').show();
     }
-    else if (REcont.test(window.location.pathname)) {
+    else if (REcont.test(loc)) {
       $('#contact').show();
     }
     else {
