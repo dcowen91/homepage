@@ -14,7 +14,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a id='projectlink' href="" >Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a id='projectlink' href="#" >Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
@@ -160,14 +160,12 @@
   function rightClick() {
     // - 1
     num = parseInt(window.location.hash.substring(3)) - 1;
-    window.location.hash = "!/" + num;
     getPost(num);
   }
 
   function leftClick() {
     // +  1
     num = parseInt(window.location.hash.substring(3)) + 1;
-    window.location.hash = "!/" + num;
     getPost(num);
 
   }
@@ -180,7 +178,6 @@
       url: "/getLatestPost.php",
       success: function(message) {
         num = message["postnum"];
-        window.location.hash = "!/" + num;
         getPost(num);
 
       }, 
@@ -230,7 +227,7 @@
 
 
   function showBlog(message) {
-    //console.log(message);
+    console.log(message);
     //console.log(message['posted']);
     hideAll();
     $('#blog').show();
@@ -239,7 +236,9 @@
     $('#blogInner').show();
     var posted = new Date(message['posted']);
     $('#blogInner').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs">Prev</button>');
-    //checkButtonDisable(message['postnum']);
+    var stateObj = {html : $('#blogInner').html()};
+    history.pushState(stateObj, "Blog", "/blog/")
+  
   }
 
   function getPost(postnum) {
@@ -252,6 +251,7 @@
           data: {post: postnum},
           success: function(message) {
             if (message == false) {
+              //if requested postnum doesnt exist
               $("#bloglink").click();
             }
             else {
