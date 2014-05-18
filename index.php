@@ -144,7 +144,7 @@
   $('#contactlink').click(function() {
     hideAll();
     $('#contact').show();
-    var stateObj = {html : $('#contact')};
+    var stateObj = {html : $('#contact').html()};
     history.pushState(stateObj, "Contact", "/contact/")
     
   });
