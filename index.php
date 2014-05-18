@@ -312,21 +312,29 @@
 
   window.onpopstate =  function() {
     console.log(window.location.pathname);
-    var REproj =   /project/
-    var REblog = /blog/
-    var REcont = /contact/
+    var REproj =   /project/;
+    var REblog = /blog/;
+    var REcont = /contact/;
+    hideAll();
 
     if (REproj.test(window.location.pathname)) {
-      $("#projectlink").click();
+      // $("#projectlink").click();
+      $('#project').show();
     }
     else if (REblog.test(window.location.pathname)) {
-      $("#bloglink").click();
+      // $("#bloglink").click();
+      $('#blog').show();
+      $('#leftPost').show();
+      $('#rightPost').show();
+      $('#blogInner').show();
     }
     else if (REcont.test(window.location.pathname)) {
-      $("#contactlink").click();
+      // $("#contactlink").click();
+      $('#contact').show();
     }
     else {
-      $("#home").click();
+      $('#home').show();
+      // $("#home").click();
     }
   }
 
