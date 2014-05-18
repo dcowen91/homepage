@@ -175,7 +175,7 @@
     $.ajax({
       type: "GET",
       contentType: "application/json",
-      url: "getLatestPost.php",
+      url: "/getLatestPost.php",
       success: function(message) {
         num = message["postnum"];
         window.location.hash = "!/" + num;
@@ -248,7 +248,7 @@
       $.ajax({
           type:"GET",
           contentType: "application/json",
-          url: "getpost.php",
+          url: "/getpost.php",
           data: {post: postnum},
           success: function(message) {
             if (message == false) {
@@ -286,7 +286,7 @@
     $.ajax({
           type:"GET",
           contentType: "application/json",
-          url: "checkpost.php",
+          url: "/checkpost.php",
           async: false,
           data: {post: num},
           success: function(message) {
