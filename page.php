@@ -150,6 +150,8 @@
   $("#projectlink").click(function() {
     hideAll();
     $('#project').show();
+    var stateObj = {html : $('#project').html()};
+    history.pushState(stateObj, "Projects", "project/")
   });
 
 
