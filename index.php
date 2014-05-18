@@ -157,15 +157,19 @@
   });
 
 
+  function getCurrentPost() {
+    return parseInt(window.location.pathname.substring(6));
+  } 
+
   function rightClick() {
     // - 1
-    num = parseInt(window.location.hash.substring(3)) - 1;
+    num = getCurrentPost() - 1;
     getPost(num);
   }
 
   function leftClick() {
     // +  1
-    num = parseInt(window.location.hash.substring(3)) + 1;
+    num = getCurrentPost() + 1;
     getPost(num);
 
   }
@@ -306,14 +310,14 @@
       });
   }
 
-  window.onhashchange = function(){
-    var currentState = window.location.hash;
-    if (currentState.indexOf("#") != -1) {
-      var state = parseInt(currentState.substring(3));
-      //console.log(state);   
-      getPost(state);
-    }
-  }
+  // window.onhashchange = function(){
+  //   var currentState = window.location.hash;
+  //   if (currentState.indexOf("#") != -1) {
+  //     var state = parseInt(currentState.substring(3));
+  //     //console.log(state);   
+  //     getPost(state);
+  //   }
+  // }
 
 
   </script>
