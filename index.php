@@ -313,7 +313,6 @@
   window.onpopstate =  function() {
     console.log("pop");
     console.log(" location: " + document.location + ", state: " + JSON.stringify(event.state));
-)
   }
 
   // window.onhashchange = function(){
