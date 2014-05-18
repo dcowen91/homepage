@@ -144,7 +144,7 @@
   $('#contactlink').click(function() {
     hideAll();
     $('#contact').show();
-    var stateObj = {html : $('#contact').html()};
+    var stateObj = {addr : "/contact/"};
     history.pushState(stateObj, "Contact", "/contact/")
     
   });
@@ -152,7 +152,7 @@
   $("#projectlink").click(function() {
     hideAll();
     $('#project').show();
-    var stateObj = {html : $('#project').html()};
+    var stateObj = {addr : "/project/"};
     history.pushState(stateObj, "Project", "/project/")
   });
 
@@ -213,7 +213,7 @@
   $('#homelink').click(function() {
     hideAll();
     $('#home').show();
-    var stateObj = {html : $('#home').html()};
+    var stateObj = {addr : "/"};
     history.pushState(stateObj, "Home", "/")
   
   });
@@ -240,7 +240,7 @@
     $('#blogInner').show();
     var posted = new Date(message['posted']);
     $('#blogInner').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs">Prev</button>');
-    var stateObj = {html : $('#blogInner').html()};
+    var stateObj = {addr : "/blog/" + message['postnum']};
     history.pushState(stateObj, "Blog", "/blog/" + message['postnum']);
   
   }
