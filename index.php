@@ -236,16 +236,12 @@
         var stateObj = {addr : loc};
         history.replacestate(stateObj, "Blog", loc);
       }
-
+      else {
+        var stateObj = {addr : loc};
+        history.replacestate(stateObj, loc.substring(1, loc.length-1), loc);
+      }
     }
 
-    //console.log("ready")
-    // var currentState = window.location.hash;
-    // if (currentState.indexOf("#") != -1) {
-    //   var state = parseInt(currentState.substring(3));
-    //   //console.log(state);   
-    //   getPost(state);
-    // }
   });
 
 
