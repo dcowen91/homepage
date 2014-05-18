@@ -27,7 +27,8 @@
             I am a software engineer interested in all things CS.
           </p>
           <p>
-            I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
+            I work for Microsoft, in the MBS division.
+            I graduated from the University of Arizona with a degree in Computer Science in May 2014. 
           </p>
           <p>
             Feel free to look around!
