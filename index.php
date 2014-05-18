@@ -311,9 +311,23 @@
   }
 
   window.onpopstate =  function() {
-    console.log("pop");
-    console.log(" location: " + window.location.pathname + ", state: " + JSON.stringify(event.state));
-    console.log(history.state);
+    console.log(window.location.pathname);
+    var REproj =   /project/
+    var REblog = /blog/
+    var REcont = /contact/
+
+    if (REproj.test(window.location.pathname)) {
+      $("#projectlink").click();
+    }
+    else if (REblog.test(window.location.pathname)) {
+      $("#bloglink").click();
+    }
+    else if (REcont.test(window.location.pathname)) {
+      $("#contactlink").click();
+    }
+    else {
+      $("#home").click();
+    }
   }
 
   // window.onhashchange = function(){
