@@ -144,7 +144,7 @@
   $('#contactlink').click(function() {
     hideAll();
     $('#contact').show();
-    var stateObj = {html : $('#contact').html()};
+    var stateObj = {html : $('#contact')};
     history.pushState(stateObj, "Contact", "/contact/")
     
   });
@@ -221,12 +221,12 @@
 
   $(document).ready(function() {
     //console.log("ready")
-    var currentState = window.location.hash;
-    if (currentState.indexOf("#") != -1) {
-      var state = parseInt(currentState.substring(3));
-      //console.log(state);   
-      getPost(state);
-    }
+    // var currentState = window.location.hash;
+    // if (currentState.indexOf("#") != -1) {
+    //   var state = parseInt(currentState.substring(3));
+    //   //console.log(state);   
+    //   getPost(state);
+    // }
   });
 
 
@@ -313,6 +313,7 @@
   window.onpopstate =  function() {
     console.log("pop");
     console.log(" location: " + window.location.pathname + ", state: " + (event.state));
+    console.log(history.state);
   }
 
   // window.onhashchange = function(){
