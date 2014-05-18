@@ -312,7 +312,7 @@
 
   window.onpopstate =  function() {
     console.log("pop");
-    console.log(" location: " + window.location.pathname + ", state: " + (event.state));
+    console.log(" location: " + window.location.pathname + ", state: " + JSON.stringify(event.state));
     console.log(history.state);
   }
 
