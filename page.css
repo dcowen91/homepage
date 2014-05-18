@@ -91,6 +91,14 @@ h1 {
   z-index: 2;
 }
 
+a { 
+  cursor: pointer; 
+}
+
+a:hover,a.hover { 
+  text-decoration: underline; 
+}
+
 /*social icons*/
 @font-face {
     font-family:si;

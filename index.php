@@ -14,7 +14,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a id='projectlink' href="#">Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="/resume.pdf">Resume</a></li> 
+        <li> <a id="homelink" class='active'>Home</a></li><li> <a id="bloglink" >Blog</a></li><li> <a id='projectlink' >Projects</a></li><li> <a id="contactlink" >Contact</a></li><li> <a href="/resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
