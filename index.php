@@ -79,8 +79,8 @@
     <button id="hide" type="button" class="btn btn-default btn-primary">Hide</button>
     <button id="newpic" type="button" class="btn btn-default btn-primary">New Pic</button>
   </div>
-  <img id="hidden" src="images/Chief.png" alt="background">
-  <img src="images/Loading.gif" id="loading" alt="loading" style="display:none">
+  <img id="hidden" src="/images/Chief.png" alt="background">
+  <img src="/images/Loading.gif" id="loading" alt="loading" style="display:none">
   <script type="text/javascript">
   var pics;
   var url;
