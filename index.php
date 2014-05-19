@@ -3,12 +3,12 @@
 <head>
   <title>Drew Owen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet" />
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="page.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" rel="script"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.js" rel="script"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.js" rel="script"></script>
 </head>
 <body>
   <div class="panel">
@@ -264,7 +264,7 @@
     $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs">Index</button>' +'<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  
       '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + 
       '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">' + 
-      '<i class="fa fa-chevron-left"></i></button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs"><i class="fa fa-chevron-right"></i></button>');  
+      'Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs">Prev</button>');  
   }
 
   function getPost(postnum) {
