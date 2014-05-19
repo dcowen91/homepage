@@ -4,7 +4,7 @@
   <title>Drew Owen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" /> -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="page.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" rel="script"></script>
@@ -14,7 +14,7 @@
   <div class="panel">
     <div class="row pull-right">
       <ul class="inline">
-        <li> <a id="homelink" class='active' href="#">Home</a></li><li> <a id="bloglink" href="#">Blog</a></li><li> <a id='projectlink' href="#">Projects</a></li><li> <a id="contactlink" href="#">Contact</a></li><li> <a href="resume.pdf">Resume</a></li> 
+        <li> <a id="homelink" class='active'>Home</a></li><li> <a id="bloglink" >Blog</a></li><li> <a id='projectlink' >Projects</a></li><li> <a id="contactlink" >Contact</a></li><li> <a href="/resume.pdf">Resume</a></li> 
       </ul>
     </div>
   </div>
@@ -27,7 +27,8 @@
             I am a software engineer interested in all things CS.
           </p>
           <p>
-            I study at the University of Arizona, seeking a degree in Computer Science. I will graduate in May 2014.
+            I work for Microsoft, in the MBS division.
+            I graduated from the University of Arizona with a degree in Computer Science in May 2014. 
           </p>
           <p>
             Feel free to look around!
@@ -79,8 +80,8 @@
     <button id="hide" type="button" class="btn btn-default btn-primary">Hide</button>
     <button id="newpic" type="button" class="btn btn-default btn-primary">New Pic</button>
   </div>
-  <img id="hidden" src="images/Chief.png" alt="background">
-  <img src="images/Loading.gif" id="loading" alt="loading" style="display:none">
+  <img id="hidden" src="/images/Chief.png" alt="background">
+  <img src="/images/Loading.gif" id="loading" alt="loading" style="display:none">
   <script type="text/javascript">
   var pics;
   var url;
@@ -117,7 +118,7 @@
   function jsonFlickrApi (response) {
     $('#loading').show();
     pics = response.photos.photo;
-    console.log("got the pics")
+    // console.log("got the pics")
     $('#loading').hide();
     //setbackground();
 
@@ -144,27 +145,43 @@
   $('#contactlink').click(function() {
     hideAll();
     $('#contact').show();
+    var stateObj = {addr : "/contact/"};
+    history.pushState(stateObj, "Contact", "/contact/")
     
   });
 
   $("#projectlink").click(function() {
     hideAll();
     $('#project').show();
+    var stateObj = {addr : "/project/"};
+    history.pushState(stateObj, "Project", "/project/")
   });
 
 
+  function getCurrentPost() {
+    return parseInt(window.location.pathname.substring(6));
+  }
+
+  function blogIndex() {
+    console.log("index");
+    var stateObj = {addr : "/blog/"};
+    history.pushState(stateObj, "Blog", "/blog/");
+  } 
+
   function rightClick() {
     // - 1
-    num = parseInt(window.location.hash.substring(3)) - 1;
-    window.location.hash = "!/" + num;
+    num = getCurrentPost() - 1;
     getPost(num);
+    var stateObj = {addr : "/blog/" + num};
+    history.pushState(stateObj, "Blog", "/blog/" + num);
   }
 
   function leftClick() {
     // +  1
-    num = parseInt(window.location.hash.substring(3)) + 1;
-    window.location.hash = "!/" + num;
+    num = getCurrentPost() + 1;
     getPost(num);
+    var stateObj = {addr : "/blog/" + num};
+    history.pushState(stateObj, "Blog", "/blog/" + num);
 
   }
 
@@ -173,11 +190,12 @@
     $.ajax({
       type: "GET",
       contentType: "application/json",
-      url: "getLatestPost.php",
+      url: "/getLatestPost.php",
       success: function(message) {
         num = message["postnum"];
-        window.location.hash = "!/" + num;
         getPost(num);
+        var stateObj = {addr : "/blog/" + num};
+        history.pushState(stateObj, "Blog", "/blog/" + num);
 
       }, 
       error: function(message) {
@@ -206,29 +224,36 @@
   });
 
   $('#homelink').click(function() {
-    window.location.hash = "";
-    showHome();
+    hideAll();
+    $('#home').show();
+    var stateObj = {addr : "/"};
+    history.pushState(stateObj, "Home", "/");
+  
   });
 
 
   $(document).ready(function() {
-    //console.log("ready")
-    var currentState = window.location.hash;
-    if (currentState.indexOf("#") != -1) {
-      var state = parseInt(currentState.substring(3));
-      //console.log(state);   
-      getPost(state);
+    if (window.location.search!= 0) {
+      var loc = window.location.search.split('=')[1];
+      parseLocation(loc);
+      var REblog = /blog/;
+      if (REblog.test(loc)) {
+        var num = loc.substring(6);
+        getPost(num);
+        var stateObj = {addr : loc};
+        history.replacestate(stateObj, "Blog", loc);
+      }
+      else {
+        var stateObj = {addr : loc};
+        history.replaceState(stateObj, loc.substring(1, loc.length-1), loc);
+      }
     }
-  });
 
-  function showHome() {
-    hideAll();
-    $('#home').show();
-  }
+  });
 
 
   function showBlog(message) {
-    //console.log(message);
+    // console.log(message);
     //console.log(message['posted']);
     hideAll();
     $('#blog').show();
@@ -236,8 +261,10 @@
     $('#rightPost').show();
     $('#blogInner').show();
     var posted = new Date(message['posted']);
-    $('#blogInner').html('<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs">Prev</button>');
-    //checkButtonDisable(message['postnum']);
+    $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs">Index</button>' +'<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  
+      '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + 
+      '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">' + 
+      '<i class="fa fa-chevron-left"></i> Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs"> <i class="fa fa-chevron-right"></i> Prev</button>');  
   }
 
   function getPost(postnum) {
@@ -246,10 +273,11 @@
       $.ajax({
           type:"GET",
           contentType: "application/json",
-          url: "getpost.php",
+          url: "/getpost.php",
           data: {post: postnum},
           success: function(message) {
             if (message == false) {
+              //if requested postnum doesnt exist
               $("#bloglink").click();
             }
             else {
@@ -284,7 +312,7 @@
     $.ajax({
           type:"GET",
           contentType: "application/json",
-          url: "checkpost.php",
+          url: "/checkpost.php",
           async: false,
           data: {post: num},
           success: function(message) {
@@ -304,15 +332,34 @@
       });
   }
 
-  window.onhashchange = function(){
-    var currentState = window.location.hash;
-    if (currentState.indexOf("#") != -1) {
-      var state = parseInt(currentState.substring(3));
-      //console.log(state);   
-      getPost(state);
-    }
+  window.onpopstate =  function() {
+    parseLocation(window.location.pathname);
   }
 
+
+
+  function parseLocation(loc) {
+    var REproj =   /project/;
+    var REblog = /blog/;
+    var REcont = /contact/;
+    hideAll();
+
+    if (REproj.test(loc)) {
+      $('#project').show();
+    }
+    else if (REblog.test(loc)) {
+      $('#blog').show();
+      $('#leftPost').show();
+      $('#rightPost').show();
+      $('#blogInner').show();
+    }
+    else if (REcont.test(loc)) {
+      $('#contact').show();
+    }
+    else {
+      $('#home').show();  
+    }
+  }
 
   </script>
 

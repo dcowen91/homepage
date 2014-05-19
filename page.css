@@ -80,7 +80,7 @@ h1 {
   z-index: 2;
   float: left;
 }
-#rightPost {
+#rightPost, #blogIndex {
   position: relative;
   margin-top: auto;
   display: block;   
@@ -89,6 +89,14 @@ h1 {
   text-align: center;
   float: right;
   z-index: 2;
+}
+
+a { 
+  cursor: pointer; 
+}
+
+a:hover,a.hover { 
+  text-decoration: underline; 
 }
 
 /*social icons*/
