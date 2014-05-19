@@ -270,7 +270,7 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
     $('#rightPost').show();
     $('#blogInner').show();
     var posted = new Date(message['posted']);
-    $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs"><i class="fa fa-align-justify"> Index</button>' +
+    $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs"><i class="fa fa-align-justify"></i> Index</button>' +
       '<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  
       '</p> <small> <em>' + 'posted on ' + posted.toDateString() + 
       '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">' + 
@@ -331,6 +331,7 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
     hideAll();
     $('#blog').show();
     $('#blogInner').show();
+    $('#blogInner').html("");
     message.forEach(function (msg) {
       var posted = new Date(msg['posted'])
       $('#blogInner').append(msg['title'] + '\t\t' + posted.toDateString() + '\n');
