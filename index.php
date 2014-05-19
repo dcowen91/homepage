@@ -1,3 +1,7 @@
+<?php
+$_GET['url'] = $_SERVER['REQUEST_URI'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +10,7 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet" />
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
-  <link rel="stylesheet" type="text/css" href="page.css">
+  <link rel="stylesheet" type="text/css" href="/page.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" rel="script"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.js" rel="script"></script>
 </head>
@@ -53,14 +57,12 @@
         </div>
         <div id="contact" style="display: none">
           <h1 class="margin-base-vertical">Drew Owen</h1>
-          Contact me via<br> <a href="mailto:dcowen@email.arizona.edu" target="_newtab">Email</a>, <a href="https://www.facebook.com/drew.owen.5" target="_newtab">Facebook</a>, <a href="https://www.linkedin.com/pub/andrew-owen/45/6ba/47a" target="_newtab">LinkedIn</a>, or <a href="https://github.com/dcowen91" target="_newtab">GitHub</a>.
+          <p>You can contact me via any of the means below:</p>
+          <a href="mailto:dcowen@email.arizona.edu" target="_newtab"><i class="fa fa-envelope-square fa-2x"></i> Email</a><br/> 
+          <a href="https://www.facebook.com/drew.owen.5" target="_newtab"><i class="fa fa-facebook-square fa-2x"></i> Facebook</a><br/> 
+          <a href="https://www.linkedin.com/pub/andrew-owen/45/6ba/47a" target="_newtab"><i class="fa fa-linkedin-square fa-2x"></i> LinkedIn</a><br/>
+          <a href="https://github.com/dcowen91" target="_newtab"><i class="fa fa-github-square fa-2x"></i> GitHub</a>
           <br>
-          <ul class="soc">
-            <li><a class="soc-email2" href="mailto:dcowen@email.arizona.edu" target="_newtab"></a></li>
-            <li><a class="soc-facebook" href="https://www.facebook.com/drew.owen.5" target="_newtab"></a></li>
-            <li><a class="soc-linkedin" href="https://www.linkedin.com/pub/andrew-owen/45/6ba/47a" target="_newtab"></a></li>
-            <li><a class="soc-github soc-icon-last" href="https://github.com/dcowen91" target="_newtab"></a></li>
-          </ul>
           <!-- Mussing around with PDF display -->
           <!-- <div><a href="resume.pdf">Direct Link</a></div>
           <object class='pdf' data="resume.pdf" type="application/pdf">
@@ -145,6 +147,7 @@
   $('#contactlink').click(function() {
     hideAll();
     $('#contact').show();
+    setActiveClass($('#contactlink'));
     var stateObj = {addr : "/contact/"};
     history.pushState(stateObj, "Contact", "/contact/")
     
@@ -153,6 +156,7 @@
   $("#projectlink").click(function() {
     hideAll();
     $('#project').show();
+    setActiveClass($('#projectlink'));
     var stateObj = {addr : "/project/"};
     history.pushState(stateObj, "Project", "/project/")
   });
@@ -194,6 +198,7 @@
       success: function(message) {
         num = message["postnum"];
         getPost(num);
+        setActiveClass($('#bloglink'));
         var stateObj = {addr : "/blog/" + num};
         history.pushState(stateObj, "Blog", "/blog/" + num);
 
@@ -226,15 +231,18 @@
   $('#homelink').click(function() {
     hideAll();
     $('#home').show();
+    setActiveClass($('#homelink'));
     var stateObj = {addr : "/"};
     history.pushState(stateObj, "Home", "/");
-  
   });
 
 
   $(document).ready(function() {
-    if (window.location.search!= 0) {
-      var loc = window.location.search.split('=')[1];
+    $(".active").css('font-weight', "bold");
+    // console.log('ready');
+    if (window.location.pathname!= '/') {
+      var loc = window.location.pathname;
+      // console.log(loc);
       parseLocation(loc);
       var REblog = /blog/;
       if (REblog.test(loc)) {
@@ -261,7 +269,7 @@
     $('#rightPost').show();
     $('#blogInner').show();
     var posted = new Date(message['posted']);
-    $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs">Index</button>' +'<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  
+    $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs"><i class="fa fa-align-justify"> Index</button>' +'<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  
       '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + 
       '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">' + 
       '<i class="fa fa-chevron-left"></i> Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs"> <i class="fa fa-chevron-right"></i> Prev</button>');  
@@ -336,6 +344,13 @@
     parseLocation(window.location.pathname);
   }
 
+  function setActiveClass(cls) {
+    $(".active").css('font-weight', "normal");
+    $(".active").removeClass('active');
+    cls.addClass('active');
+    cls.css('font-weight', "bold");
+  }
+
 
 
   function parseLocation(loc) {
@@ -346,18 +361,22 @@
 
     if (REproj.test(loc)) {
       $('#project').show();
+      setActiveClass($('#projectlink'));
     }
     else if (REblog.test(loc)) {
       $('#blog').show();
       $('#leftPost').show();
       $('#rightPost').show();
       $('#blogInner').show();
+      setActiveClass($('#bloglink'));
     }
     else if (REcont.test(loc)) {
       $('#contact').show();
+      setActiveClass($('#contactlink'));
     }
     else {
       $('#home').show();  
+      setActiveClass($('#homelink'));
     }
   }
 
