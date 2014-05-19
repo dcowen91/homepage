@@ -80,7 +80,7 @@ h1 {
   z-index: 2;
   float: left;
 }
-#rightPost {
+#rightPost, #blogIndex {
   position: relative;
   margin-top: auto;
   display: block;   
