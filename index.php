@@ -264,7 +264,7 @@
     $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs">Index</button>' +'<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  
       '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + 
       '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">' + 
-      '<i class="fa fa-chevron-right"></i>Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs"><i class="fa fa-chevron-left fa-2x"></i>Prev</button>');  
+      '<i class="fa fa-chevron-left"></i></button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs"><i class="fa fa-chevron-right"></i></button>');  
   }
 
   function getPost(postnum) {
