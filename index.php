@@ -167,7 +167,8 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
   }
 
   function blogIndex() {
-    console.log("index");
+    // console.log("index");
+    getAllPosts();
     var stateObj = {addr : "/blog/"};
     history.pushState(stateObj, "Blog", "/blog/");
   } 
@@ -269,9 +270,9 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
     $('#rightPost').show();
     $('#blogInner').show();
     var posted = new Date(message['posted']);
-    $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs">Index</button>' +
+    $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs"><i class="fa fa-align-justify"> Index</button>' +
       '<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  
-      '</p> <small> <em>' + 'posted on ' + posted.toLocaleDateString() + ' at ' + posted.toLocaleTimeString() + 
+      '</p> <small> <em>' + 'posted on ' + posted.toDateString() + 
       '</br> </small> </em> ' + '<button id="leftPost" type="button" onclick="leftClick()" class="btn btn-primary btn-xs">' + 
       '<i class="fa fa-chevron-left"></i> Next</button> <button id="rightPost" onclick="rightClick()" type="button" class="btn btn-primary btn-xs"> <i class="fa fa-chevron-right"></i> Prev</button>');  
   }
@@ -308,6 +309,32 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
           dataType: "json"          
       });
       //console.log("done");
+  }
+
+  function getAllPosts() {
+    $.ajax({
+      type:"GET",
+      contentType: "application/json",
+      url: "/getallposts.php",
+      success: function(message) {
+        showBlogIndex(message);
+      },
+      error: function(message) {
+        console.log("error loading all posts");
+        console.log(message);
+      }
+    });
+  }
+
+  function showBlogIndex(message) {
+    hideAll();
+    $('#blog').show();
+    $('#blogInner').show();
+    message.forEach(function (msg) {
+      var posted = new Date(msg['posted'])
+      $('#blogInner').append(msg['title'] + '\t\t' + posted.toDateString() + '\n');
+    })
+
   }
 
   function checkButtonDisable(postnum) {
