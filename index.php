@@ -317,7 +317,8 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
       contentType: "application/json",
       url: "/getallposts.php",
       success: function(message) {
-        showBlogIndex(message);
+        var msg = JSON.parse(message);
+        showBlogIndex(msg);
       },
       error: function(message) {
         console.log("error loading all posts");
