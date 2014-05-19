@@ -336,7 +336,7 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
     $('#blogInner').html("<h1>Archive</h1>");
     message.forEach(function (msg) {
       var posted = new Date(msg['posted']);
-      $('#blogInner').append('<div class="row"><div class="col-lg-9"><a id="'+ msg['postnum'] + '><em>' + msg['title'] + '</em></a></div><div class="col-lg-3">' + posted.toLocaleDateString() +'</div></div>');
+      $('#blogInner').append('<div class="row"><div class="col-lg-9"><a id="'+ msg['postnum'] + '"> <em>' + msg['title'] + '</em></a></div> <div class="col-lg-3">' + posted.toLocaleDateString() +'</div></div>');
     });
   }
 
