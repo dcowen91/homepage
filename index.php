@@ -269,6 +269,7 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
     $('#leftPost').show();
     $('#rightPost').show();
     $('#blogInner').show();
+    $('#disqus_thread').show();
     var posted = new Date(message['posted']);
     $('#blogInner').html('<button id="blogIndex" onclick="blogIndex()" type="button" class="btn btn-primary btn-xs"><i class="fa fa-align-justify"></i> Index</button>' +
       '<h1 class="margin-base-vertical">' + message['title'] + '</h1> <p>' + message['content'] +  
@@ -330,13 +331,13 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
   function showBlogIndex(message) {
     hideAll();
     $('#blog').show();
+    $('#disqus_thread').hide();
     $('#blogInner').show();
-    $('#blogInner').html("");
+    $('#blogInner').html("<h1>Archive</h1>");
     message.forEach(function (msg) {
       var posted = new Date(msg['posted'])
-      $('#blogInner').append(msg['title'] + '\t\t' + posted.toDateString() + '\n');
+      $('#blogInner').append('<div class="row"><div class="col-lg-9"><a id="'+ msg['postnum'] + '><em>' + msg['title'] + '</em></a></div><div class="col-lg-3">' + posted.toLocaleDateString() +'</div></div>')
     })
-
   }
 
   function checkButtonDisable(postnum) {
@@ -398,6 +399,7 @@ $_GET['url'] = $_SERVER['REQUEST_URI'];
       $('#leftPost').show();
       $('#rightPost').show();
       $('#blogInner').show();
+      $('#disqus_thread').show();
       setActiveClass($('#bloglink'));
     }
     else if (REcont.test(loc)) {
